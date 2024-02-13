@@ -14,11 +14,44 @@
   src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
 }
 
-.band-icon{
-font-family: 'Avenir light';
+.nav-bar{
+font-family: 'Avenir regular';
 }
 
-h1{
+h1 {
 font-family: 'Avenir bold';
+}
+
+html{
+width: 767px;
+}
+
+/* navigation bar */
+.nav-bar {
+width: 100%;
+height: 100px;
+background-color: #323232;
+color: #E1E1E1;
+align-items: center;
+}
+
+nav ul{
+list-style-type: none;
+display: flex;
+flex-wrap: wrap;
+}
+
+.nav-bar__list{
+width: 150px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.nav-bar__band-icon{
+margin-left: 100px;
+}
+
+.hero__image{
+width: 100%;
 }
 
