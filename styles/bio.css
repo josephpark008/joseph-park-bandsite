@@ -38,13 +38,12 @@ body {
   justify-content: space-evenly;
 }
 
-nav {
-  width: 10%;
-  justify-content: center;
-}
-
 li p {
   margin: 0;
+}
+
+nav {
+  width: 100%;
 }
 
 .nav-bar__list {
@@ -53,8 +52,20 @@ li p {
   font-size: 14px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0;
+  align-items: center;
+}
+
+.nav-bar__list__item {
+  width: 50%;
+  text-align: center;
+}
+
+.nav-bar__list__item--selected {
+  border-bottom: 3px solid white;
+  position: relative;
+  padding: 0;
 }
 
 .nav-bar__band-icon {
@@ -68,4 +79,5 @@ li p {
 
 .hero__image {
   width: 100%;
+  margin: 0;
 }/*# sourceMappingURL=bio.css.map */
