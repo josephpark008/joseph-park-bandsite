@@ -70,7 +70,6 @@ padding: 15px;
 
 .nav-bar__list__item--selected{
 border-bottom: 3px solid white;
-position: relative;
 }
 
 .nav-bar__band-icon {
@@ -83,8 +82,34 @@ position: relative;
   padding-top: 20px;
 }
 
-.hero__image {
+.hero{
+background-image: url(../assets/Images/hero-bio.jpg);
+height: 200px;
+background-size: 100%;
+background-repeat:no-repeat;
+
+&__image{
   width: 100%;
   margin: 0;
 }
+
+&__text{
+color: white  ;
+left: 16px;
+top: 42%;
+margin: 0px;
+padding-left: 15px;
+font-size: 24px;
+font-family: 'Avenir light';
+}
+
+&__filter{
+background-color: rgba(50, 50, 50, 0.5);
+height: 100%;
+display: flex;
+align-items: center;
+}
+}
+
+
 

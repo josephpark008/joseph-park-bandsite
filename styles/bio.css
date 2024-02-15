@@ -55,7 +55,6 @@ nav {
 
 .nav-bar__list__item--selected {
   border-bottom: 3px solid white;
-  position: relative;
 }
 
 .nav-bar__band-icon {
@@ -68,7 +67,28 @@ nav {
   padding-top: 20px;
 }
 
+.hero {
+  background-image: url(../assets/Images/hero-bio.jpg);
+  height: 200px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 .hero__image {
   width: 100%;
   margin: 0;
+}
+.hero__text {
+  color: white;
+  left: 16px;
+  top: 42%;
+  margin: 0px;
+  padding-left: 15px;
+  font-size: 24px;
+  font-family: "Avenir light";
+}
+.hero__filter {
+  background-color: rgba(50, 50, 50, 0.5);
+  height: 100%;
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=bio.css.map */
