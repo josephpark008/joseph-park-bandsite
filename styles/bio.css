@@ -91,4 +91,19 @@ nav {
   height: 100%;
   display: flex;
   align-items: center;
+}
+
+.about-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.about-info__header {
+  width: 92%;
+  font-family: "Avenir light";
+  margin-bottom: 10px;
+}
+.about-info__image {
+  width: 92%;
+  height: 180px;
 }/*# sourceMappingURL=bio.css.map */

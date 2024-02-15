@@ -111,5 +111,19 @@ align-items: center;
 }
 }
 
+.about-info{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 
+&__header{
+width: 92%;
+font-family: 'Avenir light';
+margin-bottom: 10px;
+}
 
+&__image{
+width: 92%;
+height: 180px;
+}
+}
