@@ -1,0 +1,65 @@
+@use './variables' as *;
+
+
+// mobile fonts
+@mixin p-s-header-font-mob() {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+@mixin subHeader-font-mob() {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+@mixin b-f-font-mob() {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+@mixin labelANDbuttons-font-mob() {
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+// desktop and tablet fonts
+@mixin p-header-font-d-t() {
+  font-size: 60px;
+  line-height: 68px;
+  font-weight: 700;
+}
+
+@mixin s-header-font-d-t() {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+}
+
+@mixin subHeader-font-d-t() {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+@mixin b-font-d-t() {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+@mixin f-font-d-t() {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin labelsANDbuttons-font-d-t() {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+}
+

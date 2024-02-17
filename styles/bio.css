@@ -1,4 +1,3 @@
-/* fonts */
 @font-face {
   font-family: "Avenir regular";
   src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
@@ -11,73 +10,89 @@
   font-family: "Avenir bold";
   src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
 }
+/* fonts */
 body {
   font-family: "Avenir regular";
 }
 
-html {
-  width: 320px;
-  height: 767px;
-}
-
 body {
-  width: 100%;
-  height: 100%;
   margin: 0;
 }
 
 /* navigation bar */
 .nav-bar {
   width: 100%;
-  height: 90px;
   background-color: #323232;
   color: #E1E1E1;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
 }
-
-li p {
+.nav-bar__band-icon {
   margin: 0;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  height: 24px;
+  padding-top: 20px;
 }
-
-nav {
-  width: 100%;
-}
-
 .nav-bar__list {
   list-style-type: none;
   padding: 0;
   font-size: 14px;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 0;
   align-items: center;
 }
-
 .nav-bar__list__item {
   width: 50%;
   text-align: center;
+  padding: 15px;
 }
-
 .nav-bar__list__item--selected {
   border-bottom: 3px solid white;
-  position: relative;
-  padding: 0;
 }
 
-.nav-bar__band-icon {
-  margin: 0;
-  font-size: 24px;
-  line-height: 32px;
-  width: 100%;
-  text-align: center;
-  height: 24px;
+.hero {
+  background-image: url(../assets/Images/hero-bio.jpg);
+  height: 200px;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
-
 .hero__image {
   width: 100%;
   margin: 0;
+}
+.hero__text {
+  color: white;
+  left: 16px;
+  top: 42%;
+  margin: 0px;
+  padding-left: 15px;
+  font-size: 24px;
+  font-family: "Avenir light";
+}
+.hero__filter {
+  background-color: rgba(50, 50, 50, 0.5);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.about-info {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.about-info p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.about-info__header {
+  width: 100%;
+  font-family: "Avenir light";
+  margin: 0;
+  margin-bottom: 10px;
+}
+.about-info__image {
+  width: 100%;
+  height: 180px;
 }/*# sourceMappingURL=bio.css.map */
