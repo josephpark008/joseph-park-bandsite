@@ -129,7 +129,7 @@ body {
   padding-top: 24px;
 }
 .about-info__image {
-  width: 100%;
+  width: 288px;
   height: 160px;
   padding-bottom: 16px;
 }
@@ -280,13 +280,9 @@ body {
     display: flex;
     align-items: center;
   }
-  .about-info {
-    padding-right: 36px;
-    padding-left: 36px;
-  }
   .about-info__body {
-    padding-left: 48px;
-    padding-right: 48px;
+    padding-left: 55px;
+    padding-right: 55px;
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 20px;
@@ -318,7 +314,7 @@ body {
   .about-info__paragraphs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 30px;
   }
   .about-info__paragraphs__p2, .about-info__paragraphs__p1 {
     padding-bottom: 16px;
@@ -326,10 +322,10 @@ body {
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
-    width: 45%;
+    width: 47%;
   }
   .about-info__paragraphs__p1 {
-    width: 45%;
+    width: 44%;
     font-size: 14px;
   }
   .about-info__header {
@@ -337,12 +333,13 @@ body {
     font-family: "Avenir light";
     font-size: 36px;
     margin: 0;
-    padding-bottom: 16px;
-    padding-top: 24px;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-top: 40px;
   }
   .about-info__image {
-    width: 100%;
+    width: 620px;
     height: 300px;
-    padding-bottom: 16px;
+    margin-bottom: 20px;
   }
 }/*# sourceMappingURL=bio.css.map */
