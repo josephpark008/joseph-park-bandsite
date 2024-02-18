@@ -195,104 +195,44 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .nav-bar,
-  .nav-bar,
-  .nav-bar__list {
-    width: 100%;
-  }
   nav {
     display: flex;
     align-items: center;
     max-width: 70%;
     height: 100%;
   }
-  .nav-bar {
-    background-color: #323232;
-    color: #E1E1E1;
-    display: flex;
-    flex-wrap: wrap;
-    height: 70px;
-  }
   .nav-bar__band-icon {
     width: 20%;
-    text-align: center;
-    padding: 8px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    max-height: 100%;
     margin-right: 25px;
     align-self: center;
   }
-  .nav-bar__band-icon__image {
-    width: 115px;
-    margin: 0;
-    font-size: 24px;
-    line-height: 32px;
-    text-align: center;
-    height: 24px;
-    font-weight: 10;
-    height: 20px;
-  }
   .nav-bar__list {
-    list-style-type: none;
-    padding: 0;
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    align-items: center;
     width: 30%;
   }
   .nav-bar__list__item {
     width: 43%;
-    text-align: center;
-    height: 100%;
     padding-bottom: 25px;
-    padding-top: 21px;
-  }
-  .nav-bar__list__item--selected {
-    border-bottom: 3px solid white;
+    padding-top: 20px;
   }
   .hero {
-    background-image: url(../assets/Images/hero-bio.jpg);
     height: 450px;
-    background-size: 100%;
-    background-repeat: no-repeat;
     background-position: center -60px;
   }
-  .hero__image {
-    width: 100%;
-    margin: 0;
-  }
   .hero__text {
-    color: white;
-    left: 16px;
-    top: 42%;
-    margin: 0px;
-    padding-left: 15px;
+    padding-left: 40px;
     font-size: 60px;
     font-family: "Avenir regular";
     font-weight: 700;
   }
-  .hero__filter {
-    background-color: rgba(50, 50, 50, 0.5);
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
   .about-info__body {
-    box-sizing: border-box;
     padding-left: 85px;
     padding-right: 85px;
-    display: flex;
-    flex-wrap: wrap;
     padding-bottom: 20px;
   }
   .about-info__band {
     font-size: 24px;
     line-height: 32px;
     font-weight: 600;
-    width: 100%;
     margin: 0;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -301,8 +241,7 @@ body {
     font-size: 24px;
     line-height: 32px;
     font-weight: 600;
-    font-size: 23px;
-    margin: 0;
+    font-size: 22px;
   }
   .about-info__by {
     font-size: 14px;
@@ -330,34 +269,33 @@ body {
     font-size: 14px;
   }
   .about-info__header {
-    width: 100%;
     font-family: "Avenir light";
     font-size: 36px;
     margin: 0;
     padding: 0;
     margin-bottom: 20px;
     margin-top: 40px;
+    margin-left: 30px;
   }
   .about-info__image {
-    width: 520px;
+    width: 550px;
     height: 300px;
     margin-bottom: 20px;
   }
   .photo-gallery {
     display: flex;
     flex-wrap: wrap;
-    background-color: #FAFAFA;
     padding: 16px;
+    padding-bottom: 40px;
   }
   .photo-gallery__header {
     margin: 0;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-top: 30px;
     margin-left: 30px;
     font-size: 36px;
     line-height: 44px;
     font-weight: 700;
-    font-weight: 1000;
   }
   .photo-gallery__photos {
     display: flex;
@@ -369,5 +307,43 @@ body {
   .photo-gallery__photos__item {
     margin: 0;
     width: 28%;
+  }
+  .footer {
+    padding: 16px;
+  }
+  .footer .footer__block {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .footer .footer__block__icons {
+    height: 22px;
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  .footer .footer__block__s-header, .footer .footer__block__info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+  .footer .footer__block__info {
+    font-weight: 300;
+    font-size: 12px;
+  }
+  .footer .footer__block__info p {
+    font-weight: 300;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .footer .footer__block__header {
+    font-weight: 700;
+  }
+  .footer .footer__block__copy {
+    font-size: 11px;
+    font-weight: 300;
+  }
+  .footer .footer__block__bandsite-logo {
+    margin-top: 20px;
   }
 }/*# sourceMappingURL=bio.css.map */

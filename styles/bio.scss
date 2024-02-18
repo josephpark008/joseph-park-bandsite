@@ -230,12 +230,8 @@ body {
 // tablet
 @media screen and (min-width: 768px) {
 
-  .nav-bar,
-  .nav-bar,
-  .nav-bar__list {
-    width: 100%;
-  }
 
+  // navigation bar
   nav {
     display: flex;
     align-items: center;
@@ -244,105 +240,49 @@ body {
   }
 
   .nav-bar {
-    background-color: #323232;
-    color: #E1E1E1;
-    display: flex;
-    flex-wrap: wrap;
-    height: 70px;
 
     &__band-icon {
       width: 20%;
-      text-align: center;
-      padding: 8px;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      max-height: 100%;
       margin-right: 25px;
       align-self: center;
-
-      &__image {
-        width: 115px;
-        margin: 0;
-        font-size: 24px;
-        line-height: 32px;
-        text-align: center;
-        height: 24px;
-        font-weight: 10;
-        height: 20px;
-      }
-
     }
 
     &__list {
-      list-style-type: none;
-      padding: 0;
-      font-size: 14px;
-      display: flex;
-      justify-content: space-between;
-      margin: 0;
-      align-items: center;
       width: 30%;
 
       &__item {
         width: 43%;
-        text-align: center;
-        height: 100%;
         padding-bottom: 25px;
-        padding-top: 21px;
-      }
-
-      &__item--selected {
-        border-bottom: 3px solid white;
+        padding-top: 20px;
       }
     }
   }
 
+
+  // hero section
   .hero {
-    background-image: url(../assets/Images/hero-bio.jpg);
     height: 450px;
-    background-size: 100%;
-    background-repeat: no-repeat;
     background-position: center -60px;
 
-    &__image {
-      width: 100%;
-      margin: 0;
-    }
-
     &__text {
-      color: white;
-      left: 16px;
-      top: 42%;
-      margin: 0px;
-      padding-left: 15px;
+      padding-left: 40px;
       font-size: 60px;
       font-family: 'Avenir regular';
       font-weight: 700;
     }
-
-    &__filter {
-      background-color: rgba(50, 50, 50, 0.5);
-      height: 100%;
-      display: flex;
-      align-items: center;
-    }
   }
 
+
+  // about musicians
   .about-info {
-
-
     &__body {
-      box-sizing: border-box;
       padding-left: 85px;
       padding-right: 85px;
-      display: flex;
-      flex-wrap: wrap;
       padding-bottom: 20px
     }
 
     &__band {
       @include subHeader-font-d-t;
-      width: 100%;
       margin: 0;
       margin-top: 40px;
       margin-bottom: 20px;
@@ -350,8 +290,7 @@ body {
 
     &__quote {
       @include subHeader-font-d-t;
-      font-size: 23px;
-      margin: 0;
+      font-size: 22px;
     }
 
     &__by {
@@ -382,37 +321,36 @@ body {
     }
 
     &__header {
-      width: 100%;
       font-family: 'Avenir light';
       font-size: 36px;
       margin: 0;
       padding: 0;
       margin-bottom: 20px;
       margin-top: 40px;
+      margin-left: 30px;
     }
 
     &__image {
-      width: 520px;
+      width: 550px;
       height: 300px;
       margin-bottom: 20px;
     }
   }
 
 
-
+// photo gallery section
   .photo-gallery {
     display: flex;
     flex-wrap: wrap;
-    background-color: #FAFAFA;
     padding: 16px;
+    padding-bottom: 40px;
 
     &__header {
       margin: 0;
-      margin-bottom: 10px;
-      margin-top: 10px;
+      margin-bottom: 20px;
+      margin-top: 30px;
       margin-left: 30px;
       @include s-header-font-d-t;
-      font-weight: 1000;
     }
 
     &__photos {
@@ -428,6 +366,56 @@ body {
       }
     }
   }
+
+// footer
+.footer {
+  padding: 16px;
+
+  .footer__block {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    &__icons {
+      height: 22px;
+      width: 15%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    &__s-header,
+    &__info {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 13px;
+    }
+
+    &__info {
+      font-weight: 300;
+      font-size: 12px;
+    }
+
+    &__info p {
+      font-weight: 300;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    &__header {
+      font-weight: 700;
+    }
+
+    &__copy {
+      font-size: 11px;
+      font-weight: 300;
+    }
+
+    &__bandsite-logo {
+      margin-top: 20px;
+    }
+  }
+}
+
 
 
 }
