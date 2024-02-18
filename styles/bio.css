@@ -157,41 +157,45 @@ body {
   background-color: #323232;
   color: white;
   padding: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
 }
-.footer .footer__block {
+.footer__body__block {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.footer .footer__block__icons {
+.footer__body__block__icons {
   height: 22px;
   width: 41%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
 }
-.footer .footer__block__s-header, .footer .footer__block__info {
+.footer__body__block__s-header, .footer__body__block__info {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 13px;
 }
-.footer .footer__block__info {
+.footer__body__block__info {
   font-weight: 300;
   font-size: 12px;
 }
-.footer .footer__block__info p {
+.footer__body__block__info p {
   font-weight: 300;
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.footer .footer__block__header {
+.footer__body__block__header {
   font-weight: 700;
 }
-.footer .footer__block__copy {
+.footer__body__block__copy {
   font-size: 11px;
   font-weight: 300;
+  margin-top: 10px;
 }
-.footer .footer__block__bandsite-logo {
-  margin-top: 20px;
+.footer__body__block__bandsite-logo {
+  margin-top: 25px;
 }
 
 @media screen and (min-width: 768px) {
@@ -309,41 +313,79 @@ body {
     width: 28%;
   }
   .footer {
-    padding: 16px;
+    padding: 50px;
+    padding-top: 40px;
+    position: relative;
   }
-  .footer .footer__block {
+  .footer__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    width: 655px;
+  }
+  .footer__body__block1 {
+    margin-left: 20px;
+  }
+  .footer__body__block {
     margin-top: 10px;
     margin-bottom: 10px;
+    max-width: 100%;
   }
-  .footer .footer__block__icons {
-    height: 22px;
+  .footer__body__block__icons {
+    height: 40px;
     width: 15%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    align-items: center;
   }
-  .footer .footer__block__s-header, .footer .footer__block__info {
+  .footer__body__block__s-header, .footer__body__block__info {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 13px;
   }
-  .footer .footer__block__info {
+  .footer__body__block__info {
     font-weight: 300;
     font-size: 12px;
   }
-  .footer .footer__block__info p {
+  .footer__body__block__info p {
     font-weight: 300;
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  .footer .footer__block__header {
+  .footer__body__block__header {
+    font-size: 36px;
+    line-height: 44px;
     font-weight: 700;
+    font-weight: 700;
+    width: 31%;
+    margin: 0;
+    margin-bottom: 40px;
+    margin-right: 27px;
+    height: 40px;
   }
-  .footer .footer__block__copy {
+  .footer__body__block__copy {
     font-size: 11px;
     font-weight: 300;
+    width: 100%;
+    margin: 0;
+    margin-top: 15px;
   }
-  .footer .footer__block__bandsite-logo {
-    margin-top: 20px;
+  .footer__body__block__bandsite-logo {
+    position: absolute;
+    left: 78%;
+    top: 15%;
+    margin: 0;
+  }
+  .footer__body__block-large {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5px;
+    height: 30px;
+    align-items: center;
+    margin-bottom: 15px;
   }
 }/*# sourceMappingURL=bio.css.map */

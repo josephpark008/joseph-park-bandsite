@@ -176,48 +176,53 @@ body {
   background-color: #323232;
   color: white;
   padding: 16px;
+  @include f-font-d-t;
 
-  .footer__block {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  &__body {
 
-    &__icons {
-      height: 22px;
-      width: 41%;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 30px;
-    }
+    &__block {
+      margin-top: 10px;
+      margin-bottom: 10px;
 
-    &__s-header,
-    &__info {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      font-size: 13px;
-    }
+      &__icons {
+        height: 22px;
+        width: 41%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+      }
 
-    &__info {
-      font-weight: 300;
-      font-size: 12px;
-    }
+      &__s-header,
+      &__info {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 13px;
+      }
 
-    &__info p {
-      font-weight: 300;
-      margin-top: 5px;
-      margin-bottom: 5px;
-    }
+      &__info {
+        font-weight: 300;
+        font-size: 12px;
+      }
 
-    &__header {
-      font-weight: 700;
-    }
+      &__info p {
+        font-weight: 300;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
 
-    &__copy {
-      font-size: 11px;
-      font-weight: 300;
-    }
+      &__header {
+        font-weight: 700;
+      }
 
-    &__bandsite-logo {
-      margin-top: 20px;
+      &__copy {
+        font-size: 11px;
+        font-weight: 300;
+        margin-top: 10px;
+      }
+
+      &__bandsite-logo {
+        margin-top: 25px;
+      }
     }
   }
 }
@@ -338,7 +343,7 @@ body {
   }
 
 
-// photo gallery section
+  // photo gallery section
   .photo-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -367,60 +372,104 @@ body {
     }
   }
 
-// footer
-.footer {
-  padding: 16px;
+  // footer
+  .footer {
+    padding: 50px;
+    padding-top: 40px;
+    position: relative;
 
-  .footer__block {
-    margin-top: 10px;
-    margin-bottom: 10px;
 
-    &__icons {
-      height: 22px;
-      width: 15%;
+    &__body {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
-      margin-bottom: 30px;
-    }
+      @include f-font-d-t;
+      width: 655px;
 
-    &__s-header,
-    &__info {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      font-size: 13px;
-    }
+      &__block1 {
+        margin-left: 20px;
+      }
 
-    &__info {
-      font-weight: 300;
-      font-size: 12px;
-    }
+      &__block {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        max-width: 100%;
 
-    &__info p {
-      font-weight: 300;
-      margin-top: 5px;
-      margin-bottom: 5px;
-    }
 
-    &__header {
-      font-weight: 700;
-    }
+        &__icons {
+          height: 40px;
+          width: 15%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
 
-    &__copy {
-      font-size: 11px;
-      font-weight: 300;
-    }
+        &__s-header,
+        &__info {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          font-size: 13px;
+        }
 
-    &__bandsite-logo {
-      margin-top: 20px;
+        &__info {
+          font-weight: 300;
+          font-size: 12px;
+        }
+
+        &__info p {
+          font-weight: 300;
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+
+        &__header {
+          @include s-header-font-d-t;
+          font-weight: 700;
+          width: 31%;
+          margin: 0;
+          margin-bottom: 40px;
+          margin-right: 27px;
+          height: 40px;
+        }
+
+        &__copy {
+          font-size: 11px;
+          font-weight: 300;
+          width: 100%;
+          margin: 0;
+          margin-top: 15px;
+        }
+
+        &__bandsite-logo {
+          position: absolute;
+          left: 78%;
+          top: 15%;
+          margin: 0;
+        }
+      }
+
+      &__block-large {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 5px;
+        height: 30px;
+        align-items: center;
+        margin-bottom: 15px;
+      }
     }
   }
-}
-
-
 
 }
 
 
 
 // desktop
-@media screen and (max-width: 1280px) {}
+@media screen and (max-width: 1280px) {
+
+
+
+
+
+  
+}
