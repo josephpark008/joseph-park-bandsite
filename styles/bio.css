@@ -192,4 +192,63 @@ body {
 }
 .footer .footer__block__bandsite-logo {
   margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-bar,
+  .nav-bar,
+  .nav-bar__list {
+    width: 100%;
+  }
+  nav {
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    max-width: 70%;
+  }
+  .nav-bar {
+    background-color: #323232;
+    color: #E1E1E1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .nav-bar__band-icon {
+    width: 20%;
+    text-align: center;
+    padding: 8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 23px;
+    margin-right: 25px;
+  }
+  .nav-bar__band-icon__image {
+    width: 115px;
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    height: 24px;
+    font-weight: 10;
+    height: 20px;
+  }
+  .nav-bar__list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    align-items: center;
+    width: 30%;
+  }
+  .nav-bar__list__item {
+    width: 43%;
+    text-align: center;
+    height: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  .nav-bar__list__item--selected {
+    border-bottom: 3px solid white;
+  }
 }/*# sourceMappingURL=bio.css.map */
