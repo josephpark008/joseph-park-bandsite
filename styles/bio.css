@@ -110,7 +110,7 @@ body {
   margin: 0;
   margin-bottom: 5px;
 }
-.about-info__p2, .about-info__p1 {
+.about-info__paragraphs__p2, .about-info__paragraphs__p1 {
   padding-bottom: 16px;
   margin: 0;
   font-size: 13px;
@@ -118,7 +118,7 @@ body {
   font-weight: 400;
   width: 97%;
 }
-.about-info__p1 {
+.about-info__paragraphs__p1 {
   width: 96%;
 }
 .about-info__header {
@@ -201,16 +201,17 @@ body {
     width: 100%;
   }
   nav {
-    max-width: 400px;
     display: flex;
     align-items: center;
     max-width: 70%;
+    height: 100%;
   }
   .nav-bar {
     background-color: #323232;
     color: #E1E1E1;
     display: flex;
     flex-wrap: wrap;
+    height: 70px;
   }
   .nav-bar__band-icon {
     width: 20%;
@@ -218,8 +219,9 @@ body {
     padding: 8px;
     padding-top: 15px;
     padding-bottom: 15px;
-    height: 23px;
+    max-height: 100%;
     margin-right: 25px;
+    align-self: center;
   }
   .nav-bar__band-icon__image {
     width: 115px;
@@ -245,10 +247,102 @@ body {
     width: 43%;
     text-align: center;
     height: 100%;
-    padding-bottom: 15px;
-    padding-top: 15px;
+    padding-bottom: 25px;
+    padding-top: 21px;
   }
   .nav-bar__list__item--selected {
     border-bottom: 3px solid white;
+  }
+  .hero {
+    background-image: url(../assets/Images/hero-bio.jpg);
+    height: 450px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center -60px;
+  }
+  .hero__image {
+    width: 100%;
+    margin: 0;
+  }
+  .hero__text {
+    color: white;
+    left: 16px;
+    top: 42%;
+    margin: 0px;
+    padding-left: 15px;
+    font-size: 60px;
+    font-family: "Avenir regular";
+    font-weight: 700;
+  }
+  .hero__filter {
+    background-color: rgba(50, 50, 50, 0.5);
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .about-info {
+    padding-right: 36px;
+    padding-left: 36px;
+  }
+  .about-info__body {
+    padding-left: 48px;
+    padding-right: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
+  .about-info__band {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    width: 100%;
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  .about-info__quote {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    font-size: 23px;
+    margin: 0;
+  }
+  .about-info__by {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    font-weight: 900;
+    margin: 0;
+    margin-top: 10px;
+  }
+  .about-info__paragraphs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .about-info__paragraphs__p2, .about-info__paragraphs__p1 {
+    padding-bottom: 16px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    width: 45%;
+  }
+  .about-info__paragraphs__p1 {
+    width: 45%;
+    font-size: 14px;
+  }
+  .about-info__header {
+    width: 100%;
+    font-family: "Avenir light";
+    font-size: 36px;
+    margin: 0;
+    padding-bottom: 16px;
+    padding-top: 24px;
+  }
+  .about-info__image {
+    width: 100%;
+    height: 300px;
+    padding-bottom: 16px;
   }
 }/*# sourceMappingURL=bio.css.map */
