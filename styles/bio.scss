@@ -32,7 +32,7 @@ body {
     padding-top: 15px;
 
     &__image {
-      width: 120px;
+      width: 115px;
       margin: 0;
       font-size: 24px;
       line-height: 32px;
@@ -86,7 +86,8 @@ body {
     margin: 0px;
     padding-left: 15px;
     font-size: 24px;
-    font-family: 'Avenir light';
+    font-family: 'Avenir regular';
+    font-weight: 300;
   }
 
   &__filter {
@@ -149,24 +150,74 @@ body {
 
 // photo gallery
 
-.photo-gallery{
-background-color:#FAFAFA ;
-padding: 16px;
-padding-bottom: 0;
+.photo-gallery {
+  background-color: #FAFAFA;
+  padding: 16px;
+  padding-bottom: 0;
 
-&__header{
-margin: 0;
-margin-bottom: 10px;
-margin-top: 10px;
-@include p-s-header-font-mob;
-font-weight: 1000;
+  &__header {
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    @include p-s-header-font-mob;
+    font-weight: 1000;
+  }
+
+  &__photos {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
-&__photos{
-width: 100%;
-margin-bottom: 10px;
 
-}
+// footer section
 
+.footer {
+  background-color: #323232;
+  color: white;
+  padding: 16px;
 
+  .footer__block {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    &__icons {
+      height: 22px;
+      width: 41%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    &__s-header,
+    &__info {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 13px;
+    }
+
+    &__info {
+      font-weight: 300;
+      font-size: 12px;
+    }
+
+    &__info p {
+      font-weight: 300;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    &__header {
+      font-weight: 700;
+    }
+
+    &__copy {
+      font-size: 11px;
+      font-weight: 300;
+    }
+
+    &__bandsite-logo {
+      margin-top: 20px;
+    }
+  }
 }

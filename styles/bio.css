@@ -39,7 +39,7 @@ body {
   padding-top: 15px;
 }
 .nav-bar__band-icon__image {
-  width: 120px;
+  width: 115px;
   margin: 0;
   font-size: 24px;
   line-height: 32px;
@@ -83,7 +83,8 @@ body {
   margin: 0px;
   padding-left: 15px;
   font-size: 24px;
-  font-family: "Avenir light";
+  font-family: "Avenir regular";
+  font-weight: 300;
 }
 .hero__filter {
   background-color: rgba(50, 50, 50, 0.5);
@@ -150,4 +151,45 @@ body {
 .photo-gallery__photos {
   width: 100%;
   margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #323232;
+  color: white;
+  padding: 16px;
+}
+.footer .footer__block {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.footer .footer__block__icons {
+  height: 22px;
+  width: 41%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.footer .footer__block__s-header, .footer .footer__block__info {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+.footer .footer__block__info {
+  font-weight: 300;
+  font-size: 12px;
+}
+.footer .footer__block__info p {
+  font-weight: 300;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.footer .footer__block__header {
+  font-weight: 700;
+}
+.footer .footer__block__copy {
+  font-size: 11px;
+  font-weight: 300;
+}
+.footer .footer__block__bandsite-logo {
+  margin-top: 20px;
 }/*# sourceMappingURL=bio.css.map */
