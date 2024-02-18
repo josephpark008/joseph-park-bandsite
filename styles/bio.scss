@@ -228,11 +228,8 @@ body {
 }
 
 
-// mobile
-@media screen and (max-width: 320px) {}
 
-
-// tablet
+// TABLET
 @media screen and (min-width: 768px) {
 
 
@@ -464,8 +461,8 @@ body {
 
 
 
-// desktop
-@media screen and (max-width: 1280px) {
+// DESKTOP
+@media screen and (min-width: 1280px) {
 
   // navigation bar
   .nav-bar {
@@ -503,35 +500,76 @@ body {
     }
   }
 
-// about musicians section
-.about-info{
-padding: 0;
-padding-left: 110px;
-padding-right: 110px;
+  // about musicians section
+  .about-info {
+    padding: 0;
+    padding-left: 110px;
+    padding-right: 110px;
+    height: 1020px;
 
-&__quote{
-width: 77%;
-}
+    &__quote {
+      width: 77%;
+    }
 
-&__body{
-padding-left: 110px;
-padding-right: 110px;
-}
-&__image{
-width: 100%;
-height: 45%;
-}
-&__paragraphs{
-  justify-content: space-between;
-&__p1{
-width: 49%;
-}
-}
+    &__body {
+      padding-left: 110px;
+      padding-right: 110px;
+    }
+
+    &__image {
+      width: 100%;
+      height: 45%;
+    }
+
+    &__paragraphs {
+      justify-content: space-between;
+
+      &__p1 {
+        width: 49%;
+      }
+    }
+  }
+
+  .photo-gallery {
+    padding-left: 70px;
+    padding-right: 70px;
+
+    &__photos {
+      width: 100%;
+
+      &__item {
+        width: 27%;
+      }
+
+    }
+
+    &__header {
+      width: 100%;
+      margin-left: 80px;
+    }
+
+  }
 
 
+  // footer section
+  .footer {
+    padding-left: 150px;
+    padding-right: 150px;
 
-}
+    &__body {
+      width: 690px;
 
+      &__block {
+        &__header {
+          width: 230px;
 
+        }
 
+        &__icons {
+          width: 110px;
+        }
+      }
+    }
+
+  }
 }
