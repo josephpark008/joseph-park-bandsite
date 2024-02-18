@@ -163,7 +163,7 @@ body {
     font-weight: 1000;
   }
 
-  &__photos {
+  &__photos__item {
     width: 100%;
     margin-bottom: 10px;
   }
@@ -332,8 +332,9 @@ body {
 
 
     &__body {
-      padding-left: 55px;
-      padding-right: 55px;
+      box-sizing: border-box;
+      padding-left: 85px;
+      padding-right: 85px;
       display: flex;
       flex-wrap: wrap;
       padding-bottom: 20px
@@ -347,11 +348,12 @@ body {
       margin-bottom: 20px;
     }
 
-    &__quote{
+    &__quote {
       @include subHeader-font-d-t;
       font-size: 23px;
       margin: 0;
     }
+
     &__by {
       @include b-font-d-t;
       font-weight: 900;
@@ -362,25 +364,22 @@ body {
     &__paragraphs {
       display: flex;
       flex-wrap: wrap;
-      gap: 30px ;
+      gap: 11px;
 
       &__p2,
       &__p1 {
         padding-bottom: 16px;
         margin: 0;
         @include b-font-d-t;
-        width: 47%;
+        width: 49%;
       }
 
       &__p1 {
-        width: 44%;
+        width: 49%;
         font-size: 14px;
 
       }
     }
-
-
-
 
     &__header {
       width: 100%;
@@ -393,9 +392,40 @@ body {
     }
 
     &__image {
-      width: 620px;
+      width: 520px;
       height: 300px;
       margin-bottom: 20px;
+    }
+  }
+
+
+
+  .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FAFAFA;
+    padding: 16px;
+
+    &__header {
+      margin: 0;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-left: 30px;
+      @include s-header-font-d-t;
+      font-weight: 1000;
+    }
+
+    &__photos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      width: 768px;
+
+      &__item {
+        margin: 0;
+        width: 28%;
+      }
     }
   }
 
