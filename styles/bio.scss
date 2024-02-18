@@ -503,7 +503,34 @@ body {
     }
   }
 
+// about musicians section
+.about-info{
+padding: 0;
+padding-left: 110px;
+padding-right: 110px;
 
+&__quote{
+width: 77%;
+}
+
+&__body{
+padding-left: 110px;
+padding-right: 110px;
+}
+&__image{
+width: 100%;
+height: 45%;
+}
+&__paragraphs{
+  justify-content: space-between;
+&__p1{
+width: 49%;
+}
+}
+
+
+
+}
 
 
 
