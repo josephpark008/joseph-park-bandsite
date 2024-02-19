@@ -3,7 +3,7 @@
   src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
 }
 @font-face {
-  font-family: "Avenir light";
+  font-family: "Avenir demi";
   src: url("../assets/fonts/AvenirNextLTPro-Demi.otf");
 }
 @font-face {
@@ -49,7 +49,7 @@ body {
 .about-info__header,
 .photo-gallery__header,
 .footer__body__block__header {
-  font-family: "Avenir light";
+  font-family: "Avenir demi";
 }
 
 .nav-bar__list__item,
@@ -88,15 +88,21 @@ body {
   justify-content: space-between;
   margin: 0;
   align-items: center;
+  text-decoration: none;
 }
 .nav-bar__list__item {
   width: 50%;
   text-align: center;
   padding-bottom: 0.625rem;
+  text-decoration: none;
+  color: #AFAFAF;
 }
-.nav-bar__list__item--selected {
+.nav-bar__list__item:hover {
   border-bottom: 3px solid white;
+}
+.nav-bar__list__item:active {
   color: white;
+  font-weight: bold;
 }
 
 .hero {
@@ -222,7 +228,7 @@ body {
   .about-info__band,
   .about-info__by,
   .about-info__header {
-    font-family: "Avenir light";
+    font-family: "Avenir demi";
   }
   .nav-bar__list__item {
     font-size: 12px;

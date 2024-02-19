@@ -35,7 +35,7 @@ body {
 .about-info__header,
 .photo-gallery__header,
 .footer__body__block__header {
-  font-family: 'Avenir light';
+  font-family: 'Avenir demi';
 }
 
 .nav-bar__list__item,
@@ -76,16 +76,23 @@ body {
     justify-content: space-between;
     margin: 0;
     align-items: center;
+    text-decoration: none;
 
     &__item {
       width: 50%;
       text-align: center;
       padding-bottom: 0.625rem;
-    }
+      text-decoration: none;
+      color: #AFAFAF;
 
-    &__item--selected {
-      border-bottom: 3px solid white;
-      color: white;
+      &:hover {
+        border-bottom: 3px solid white;
+      }
+
+      &:active {
+        color: white;
+        font-weight: bold;
+      }
     }
   }
 }
@@ -95,6 +102,7 @@ body {
 
 .hero {
   background-image: url(../assets/Images/hero-bio.jpg);
+  //used px because % cannot is capped and cannot create desired height
   height: 200px;
   background-size: $full-width-height;
   background-repeat: no-repeat;
@@ -257,7 +265,7 @@ body {
   .about-info__band,
   .about-info__by,
   .about-info__header {
-    font-family: 'Avenir light';
+    font-family: 'Avenir demi';
   }
 
   .nav-bar__list__item {
@@ -323,6 +331,7 @@ body {
 
   // hero section
   .hero {
+    //used px because % cannot is capped and cannot create desired height
     height: 450px;
     background-position: center -60px;
 
@@ -535,6 +544,7 @@ body {
 
   // hero section  
   .hero {
+    //used px because % cannot is capped and cannot create desired height
     height: 620px;
 
     &__text {
