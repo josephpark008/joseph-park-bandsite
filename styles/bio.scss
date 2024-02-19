@@ -58,7 +58,7 @@ body {
 
 .nav-bar {
   background-color: #323232;
-  color: #E1E1E1;
+  color: #AFAFAF;
   display: flex;
   flex-wrap: wrap;
 
@@ -85,6 +85,7 @@ body {
 
     &__item--selected {
       border-bottom: 3px solid white;
+      color: white;
     }
   }
 }
@@ -158,8 +159,8 @@ body {
   }
 
   &__image {
-    width: 97%;
-    height: 20%;
+    width: 289px;
+    height: 170px;
     padding-bottom: $padding;
   }
 }
@@ -180,6 +181,7 @@ body {
   &__photos__item {
     width: $full-width-height;
     margin-bottom: 0.625rem;
+
   }
 }
 
@@ -381,7 +383,8 @@ body {
 
     &__image {
       width: $full-width-height;
-      height: 30%;
+      height: 320px;
+      width: 560px;
       margin-bottom: 1.25rem;
     }
   }
@@ -410,6 +413,12 @@ body {
       &__item {
         margin: 0;
         width: 28%;
+
+        &:hover {
+          width: 400px;
+          height: 300px;
+          border: black solid 5px;
+        }
       }
     }
   }
@@ -547,9 +556,10 @@ body {
     &__quote {
       width: 78%;
     }
-&__band{
-margin-bottom: 1.25rem;
-}
+
+    &__band {
+      margin-bottom: 1.25rem;
+    }
 
     &__body {
       height: 50%;
@@ -559,7 +569,8 @@ margin-bottom: 1.25rem;
 
     &__image {
       width: $full-width-height;
-      height: 45%;
+      height: 500px;
+      width: 900px;
     }
 
     &__paragraphs {
@@ -580,6 +591,12 @@ margin-bottom: 1.25rem;
 
       &__item {
         width: 27%;
+
+        &:hover {
+          width: 500px;
+          height: 300px;
+          border: solid black 10px;
+        }
       }
 
     }
@@ -600,7 +617,7 @@ margin-bottom: 1.25rem;
     padding-right: 9.375rem;
 
     &__body {
-      width: 70%;
+      width: 78%;
 
       &__block {
 
