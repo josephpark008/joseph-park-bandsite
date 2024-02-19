@@ -71,7 +71,7 @@ body {
 
 .nav-bar {
   background-color: #323232;
-  color: #E1E1E1;
+  color: #AFAFAF;
   display: flex;
   flex-wrap: wrap;
 }
@@ -96,6 +96,7 @@ body {
 }
 .nav-bar__list__item--selected {
   border-bottom: 3px solid white;
+  color: white;
 }
 
 .hero {
@@ -151,8 +152,8 @@ body {
   padding-top: 1.5rem;
 }
 .about-info__image {
-  width: 97%;
-  height: 20%;
+  width: 289px;
+  height: 170px;
   padding-bottom: 16px;
 }
 
@@ -326,7 +327,8 @@ body {
   }
   .about-info__image {
     width: 100%;
-    height: 30%;
+    height: 320px;
+    width: 560px;
     margin-bottom: 1.25rem;
   }
   .photo-gallery {
@@ -350,6 +352,11 @@ body {
   .photo-gallery__photos__item {
     margin: 0;
     width: 28%;
+  }
+  .photo-gallery__photos__item:hover {
+    width: 400px;
+    height: 300px;
+    border: black solid 5px;
   }
   .footer {
     padding: 3.125rem;
@@ -462,7 +469,8 @@ body {
   }
   .about-info__image {
     width: 100%;
-    height: 45%;
+    height: 500px;
+    width: 900px;
   }
   .about-info__paragraphs {
     justify-content: space-between;
@@ -480,6 +488,11 @@ body {
   .photo-gallery__photos__item {
     width: 27%;
   }
+  .photo-gallery__photos__item:hover {
+    width: 500px;
+    height: 300px;
+    border: solid black 10px;
+  }
   .photo-gallery__header {
     width: 100%;
     margin-left: 5rem;
@@ -491,7 +504,7 @@ body {
     padding-right: 9.375rem;
   }
   .footer__body {
-    width: 70%;
+    width: 78%;
   }
   .footer__body__block__copy {
     font-size: 0.75rem;
