@@ -2,21 +2,58 @@
 @use './partials/mixins' as *;
 @use './partials/typography' as *;
 
-/* fonts */
-
-body {
-  font-family: 'Avenir regular';
-}
-
+/* fonts mobile */
 body {
   margin: 0;
 }
 
-/* navigation bar */
+.nav-bar__list__item,
+.about-info__band {
+  @include subHeader-font-mob;
+}
+
+.hero__text,
+.about-info__header,
+.photo-gallery__header,
+.footer__body__block__header {
+  @include p-s-header-font-mob;
+}
+
+.about-info__paragraphs__p1,
+.about-info__paragraphs__p2,
+.footer__body__block__s-header,
+.footer__body__block,
+.footer__body__block__copy,
+.about-info__quote,
+.about-info__by {
+  @include b-f-font-mob;
+}
+
+.about-info__quote,
+.about-info__by,
+.hero__text,
+.about-info__header,
+.photo-gallery__header,
+.footer__body__block__header {
+  font-family: 'Avenir light';
+}
+
+.nav-bar__list__item,
+.about-info__paragraphs__p1,
+.about-info__paragraphs__p2,
+.footer__body__block__s-header,
+.footer__body__block,
+.footer__body__block__copy,
+.about-info__band {
+  font-family: 'Avenir regular';
+}
+
+
+/* navigation bar mobile */
 .nav-bar nav,
 .nav-bar,
 .nav-bar__list {
-  width: 100%;
+  width: $full-width-height;
 }
 
 .nav-bar {
@@ -26,28 +63,15 @@ body {
   flex-wrap: wrap;
 
   &__band-icon {
-    width: 100%;
+    width: $full-width-height;
     text-align: center;
-    padding: 8px;
-    padding-top: 15px;
-
-    &__image {
-      width: 115px;
-      margin: 0;
-      font-size: 24px;
-      line-height: 32px;
-      text-align: center;
-      height: 24px;
-      font-weight: 10;
-      height: 20px;
-    }
-
+    padding: 0.5rem;
+    padding-top: 0.938rem;
   }
 
   &__list {
     list-style-type: none;
     padding: 0;
-    font-size: 14px;
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -56,7 +80,7 @@ body {
     &__item {
       width: 50%;
       text-align: center;
-      padding-bottom: 10px;
+      padding-bottom: 0.625rem;
     }
 
     &__item--selected {
@@ -66,65 +90,58 @@ body {
 }
 
 
-// hero section
+// hero section mobile
 
 .hero {
   background-image: url(../assets/Images/hero-bio.jpg);
   height: 200px;
-  background-size: 100%;
+  background-size: $full-width-height;
   background-repeat: no-repeat;
 
   &__image {
-    width: 100%;
+    width: $full-width-height;
     margin: 0;
   }
 
   &__text {
     color: white;
-    left: 16px;
+    left: $padding;
     top: 42%;
     margin: 0px;
-    padding-left: 15px;
-    font-size: 24px;
-    font-family: 'Avenir regular';
-    font-weight: 300;
+    padding-left: 0.938rem;
   }
 
   &__filter {
     background-color: rgba(50, 50, 50, 0.5);
-    height: 100%;
+    height: $full-width-height;
     display: flex;
     align-items: center;
   }
 }
 
 
-// about the musicians section
+// about the musicians section mobile
 .about-info {
   display: flex;
   flex-wrap: wrap;
-  padding-right: 16px;
-  padding-left: 16px;
-
-  &__band {
-    font-size: 14.5px;
-    font-weight: 600;
-  }
+  padding-right: $padding;
+  padding-left: $padding;
 
   &__quote,
   &__by {
-    line-height: 22px;
-    font-size: 14.5px;
-    font-weight: 900;
+    line-height: 1.375rem;
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 0.313rem;
+  }
+
+  &__quote {
+    width: 93%;
   }
 
   &__paragraphs__p2,
   &__paragraphs__p1 {
-    padding-bottom: 16px;
+    padding-bottom: $padding;
     margin: 0;
-    @include b-f-font-mob;
     width: 97%;
   }
 
@@ -134,94 +151,82 @@ body {
 
 
   &__header {
-    width: 100%;
-    font-family: 'Avenir light';
+    width: $full-width-height;
     margin: 0;
-    padding-bottom: 16px;
-    padding-top: 24px;
+    padding-bottom: $padding;
+    padding-top: 1.5rem;
   }
 
   &__image {
-    width: 288px;
-    height: 160px;
-    padding-bottom: 16px;
+    width: 97%;
+    height: 20%;
+    padding-bottom: $padding;
   }
 }
 
-// photo gallery
+// photo gallery mobile
 
 .photo-gallery {
   background-color: #FAFAFA;
-  padding: 16px;
+  padding: $padding;
   padding-bottom: 0;
 
   &__header {
     margin: 0;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    @include p-s-header-font-mob;
-    font-weight: 1000;
+    margin-bottom: 0.625rem;
+    margin-top: 0.625rem;
   }
 
   &__photos__item {
-    width: 100%;
-    margin-bottom: 10px;
+    width: $full-width-height;
+    margin-bottom: 0.625rem;
   }
 }
 
 
-// footer section
+// footer section mobile
 
 .footer {
   background-color: #323232;
   color: white;
-  padding: 16px;
-  @include f-font-d-t;
+  padding: $padding;
 
   &__body {
 
     &__block {
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin-top: 0.625rem;
+      margin-bottom: 0.625rem;
 
       &__icons {
-        height: 22px;
         width: 41%;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
       }
 
       &__s-header,
       &__info {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-size: 13px;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
       }
 
       &__info {
-        font-weight: 300;
-        font-size: 12px;
+        font-size: 0.75rem;
       }
 
       &__info p {
-        font-weight: 300;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-top: 0.313rem;
+        margin-bottom: 0.313rem;
       }
 
-      &__header {
-        font-weight: 700;
-      }
 
       &__copy {
-        font-size: 11px;
-        font-weight: 300;
-        margin-top: 10px;
+        margin-top: 0.925rem;
+        font-size: 0.68rem;
       }
 
       &__bandsite-logo {
-        margin-top: 25px;
+        margin-top: 1.563rem;
       }
     }
   }
@@ -230,7 +235,59 @@ body {
 
 
 // TABLET
+
 @media screen and (min-width: 768px) {
+
+  //Fonts tablet and desktop
+  .nav-bar__list__item,
+  .hero__text,
+  .about-info__header,
+  .footer,
+  .about-info__paragraphs__p1,
+  .about-info__paragraphs__p2,
+  .footer__body__block__copy {
+    font-family: 'Avenir regular';
+  }
+
+  .photo-gallery__header,
+  .footer__body__block__header,
+  .about-info__quote,
+  .about-info__band,
+  .about-info__by,
+  .about-info__header {
+    font-family: 'Avenir light';
+  }
+
+  .nav-bar__list__item {
+    @include labelsANDbuttons-font-d-t;
+  }
+
+  .hero__text {
+    @include p-header-font-d-t;
+  }
+
+  .about-info__header,
+  .photo-gallery__header,
+  .footer__body__block__header {
+    @include s-header-font-d-t;
+  }
+
+  .footer__body__block__s-header,
+  .footer {
+    @include f-font-d-t;
+  }
+
+  .about-info__quote,
+  .about-info__band {
+    @include subHeader-font-d-t;
+  }
+
+  .about-info__by,
+  .about-info__paragraphs__p1,
+  .about-info__paragraphs__p2 {
+    @include b-font-d-t;
+  }
+
 
 
   // navigation bar
@@ -238,15 +295,16 @@ body {
     display: flex;
     align-items: center;
     max-width: 70%;
-    height: 100%;
+    height: $full-width-height;
   }
 
   .nav-bar {
 
     &__band-icon {
       width: 20%;
-      margin-right: 25px;
+      margin-right: 1.563rem;
       align-self: center;
+      padding-bottom: 1.25rem;
     }
 
     &__list {
@@ -254,8 +312,8 @@ body {
 
       &__item {
         width: 43%;
-        padding-bottom: 25px;
-        padding-top: 20px;
+        padding-bottom: 1.563rem;
+        padding-top: 1.25rem;
       }
     }
   }
@@ -267,10 +325,7 @@ body {
     background-position: center -60px;
 
     &__text {
-      padding-left: 40px;
-      font-size: 60px;
-      font-family: 'Avenir regular';
-      font-weight: 700;
+      padding-left: 2.5rem;
     }
   }
 
@@ -278,64 +333,56 @@ body {
   // about musicians
   .about-info {
     &__body {
-      padding-left: 85px;
-      padding-right: 85px;
-      padding-bottom: 20px
+      padding-left: 5.313rem;
+      padding-right: 5.313rem;
+      padding-bottom: 1.25rem
     }
 
     &__band {
-      @include subHeader-font-d-t;
       margin: 0;
-      margin-top: 40px;
-      margin-bottom: 20px;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
     }
 
     &__quote {
-      @include subHeader-font-d-t;
-      font-size: 22px;
+      width: 100%;
+      font-size: 1.375rem;
     }
 
     &__by {
-      @include b-font-d-t;
-      font-weight: 900;
       margin: 0;
-      margin-top: 10px;
+      margin-top: 0.625rem;
     }
 
     &__paragraphs {
       display: flex;
       flex-wrap: wrap;
-      gap: 11px;
+      gap: 0.688rem;
 
       &__p2,
       &__p1 {
-        padding-bottom: 16px;
+        padding-bottom: $padding;
         margin: 0;
-        @include b-font-d-t;
         width: 49%;
       }
 
       &__p1 {
         width: 49%;
-        font-size: 14px;
-
       }
     }
 
     &__header {
-      font-family: 'Avenir light';
-      font-size: 36px;
       margin: 0;
       padding: 0;
-      margin-bottom: 20px;
-      margin-top: 40px;
-      margin-left: 30px;
+      margin-bottom: 1.25rem;
+      margin-top: 2.5rem;
+      margin-left: 1.875rem;
     }
 
     &__image {
-      width: 550px;
-      height: 300px;
-      margin-bottom: 20px;
+      width: $full-width-height;
+      height: 30%;
+      margin-bottom: 1.25rem;
     }
   }
 
@@ -344,23 +391,21 @@ body {
   .photo-gallery {
     display: flex;
     flex-wrap: wrap;
-    padding: 16px;
-    padding-bottom: 40px;
+    padding: $padding;
+    padding-bottom: 2.5rem;
 
     &__header {
       margin: 0;
-      margin-bottom: 20px;
-      margin-top: 30px;
-      margin-left: 30px;
-      @include s-header-font-d-t;
+      margin-bottom: 1.25rem;
+      margin-top: 1.875rem;
+      margin-left: 1.875rem;
     }
 
     &__photos {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 25px;
-      width: 768px;
+      gap: 1.563rem;
 
       &__item {
         margin: 0;
@@ -371,8 +416,8 @@ body {
 
   // footer
   .footer {
-    padding: 50px;
-    padding-top: 40px;
+    padding: 3.125rem;
+    padding-top: 2.5rem;
     position: relative;
 
 
@@ -380,21 +425,19 @@ body {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      @include f-font-d-t;
-      width: 655px;
+      width: 97%;
 
       &__block1 {
-        margin-left: 20px;
+        margin-left: 1.25rem;
       }
 
       &__block {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        max-width: 100%;
+        margin-top: 0.625rem;
+        margin-bottom: 0.625rem;
+        max-width: $full-width-height;
 
 
         &__icons {
-          height: 40px;
           width: 15%;
           display: flex;
           justify-content: space-between;
@@ -403,38 +446,27 @@ body {
 
         &__s-header,
         &__info {
-          margin-top: 20px;
-          margin-bottom: 20px;
-          font-size: 13px;
-        }
-
-        &__info {
-          font-weight: 300;
-          font-size: 12px;
+          margin-top: 1.25rem;
+          margin-bottom: 1.25rem;
         }
 
         &__info p {
-          font-weight: 300;
-          margin-top: 5px;
-          margin-bottom: 5px;
+          margin-top: 0.313rem;
+          margin-bottom: 0.313rem;
         }
 
         &__header {
-          @include s-header-font-d-t;
-          font-weight: 700;
           width: 31%;
           margin: 0;
-          margin-bottom: 40px;
-          margin-right: 27px;
-          height: 40px;
+          margin-bottom: 2.5rem;
+          margin-right: 2.188rem;
         }
 
         &__copy {
-          font-size: 11px;
-          font-weight: 300;
-          width: 100%;
+          width: $full-width-height;
           margin: 0;
-          margin-top: 15px;
+          margin-top: 0.938rem;
+          font-size: 0.75rem;
         }
 
         &__bandsite-logo {
@@ -448,11 +480,11 @@ body {
       &__block-large {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
-        margin-top: 5px;
-        height: 30px;
+        width: $full-width-height;
+        margin-top: 0.313rem;
+        height: 40px;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: 0.938rem;
       }
     }
   }
@@ -469,20 +501,21 @@ body {
     height: 80px;
 
     &__list {
-      width: 160px;
+      width: 16%;
 
       &__item {
         padding: 0;
-        padding-top: 50px;
-        padding-bottom: 20px;
+        padding-top: 3.125rem;
+        padding-bottom: 1.25rem;
       }
     }
 
     &__band-icon {
       margin: 0;
-      margin-left: 120px;
-      margin-right: 60px;
-      width: 100px;
+      margin-left: 7.5rem;
+      margin-right: 3.75rem;
+      width: 8%;
+      padding-top: 2.188rem;
     }
   }
 
@@ -496,28 +529,36 @@ body {
     height: 620px;
 
     &__text {
-      padding-left: 130px;
+      padding-left: 8.125rem;
     }
   }
 
   // about musicians section
   .about-info {
     padding: 0;
-    padding-left: 110px;
-    padding-right: 110px;
-    height: 1020px;
+    padding-left: 6.875rem;
+    padding-right: 6.875rem;
 
-    &__quote {
-      width: 77%;
+    &__header {
+      margin-top: 3.125rem;
+      margin-bottom: 1.875rem;
     }
 
+    &__quote {
+      width: 78%;
+    }
+&__band{
+margin-bottom: 1.25rem;
+}
+
     &__body {
-      padding-left: 110px;
-      padding-right: 110px;
+      height: 50%;
+      padding-left: 6.875rem;
+      padding-right: 6.875rem;
     }
 
     &__image {
-      width: 100%;
+      width: $full-width-height;
       height: 45%;
     }
 
@@ -531,11 +572,11 @@ body {
   }
 
   .photo-gallery {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
 
     &__photos {
-      width: 100%;
+      width: $full-width-height;
 
       &__item {
         width: 27%;
@@ -544,8 +585,10 @@ body {
     }
 
     &__header {
-      width: 100%;
-      margin-left: 80px;
+      width: $full-width-height;
+      margin-left: 5rem;
+      margin-top: 1.875rem;
+      margin-bottom: 1.875rem;
     }
 
   }
@@ -553,20 +596,25 @@ body {
 
   // footer section
   .footer {
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 9.375rem;
+    padding-right: 9.375rem;
 
     &__body {
-      width: 690px;
+      width: 70%;
 
       &__block {
+
+        &__copy {
+          font-size: 0.75rem;
+        }
+
         &__header {
-          width: 230px;
+          width: 23%;
 
         }
 
         &__icons {
-          width: 110px;
+          width: 12%;
         }
       }
     }
