@@ -95,6 +95,7 @@ body {
 
 .hero {
   background-image: url(../assets/Images/hero-bio.jpg);
+  //used px because % cannot is capped and cannot create desired height
   height: 200px;
   background-size: $full-width-height;
   background-repeat: no-repeat;
@@ -323,6 +324,7 @@ body {
 
   // hero section
   .hero {
+    //used px because % cannot is capped and cannot create desired height
     height: 450px;
     background-position: center -60px;
 
@@ -535,6 +537,7 @@ body {
 
   // hero section  
   .hero {
+    //used px because % cannot is capped and cannot create desired height
     height: 620px;
 
     &__text {
