@@ -2,21 +2,58 @@
 @use './partials/mixins' as *;
 @use './partials/typography' as *;
 
-/* fonts */
-
-body {
-  font-family: 'Avenir regular';
-}
-
+/* fonts mobile */
 body {
   margin: 0;
 }
 
-/* navigation bar */
+.nav-bar__list__item,
+.about-info__band {
+  @include subHeader-font-mob;
+}
+
+.hero__text,
+.about-info__header,
+.photo-gallery__header,
+.footer__body__block__header {
+  @include p-s-header-font-mob;
+}
+
+.about-info__paragraphs__p1,
+.about-info__paragraphs__p2,
+.footer__body__block__s-header,
+.footer__body__block,
+.footer__body__block__copy,
+.about-info__quote,
+.about-info__by {
+  @include b-f-font-mob;
+}
+
+.about-info__quote,
+.about-info__by,
+.hero__text,
+.about-info__header,
+.photo-gallery__header,
+.footer__body__block__header {
+  font-family: 'Avenir light';
+}
+
+.nav-bar__list__item,
+.about-info__paragraphs__p1,
+.about-info__paragraphs__p2,
+.footer__body__block__s-header,
+.footer__body__block,
+.footer__body__block__copy,
+.about-info__band {
+  font-family: 'Avenir regular';
+}
+
+
+/* navigation bar mobile */
 .nav-bar nav,
 .nav-bar,
 .nav-bar__list {
-  width: 100%;
+  width: $full-width-height;
 }
 
 .nav-bar {
@@ -26,28 +63,15 @@ body {
   flex-wrap: wrap;
 
   &__band-icon {
-    width: 100%;
+    width: $full-width-height;
     text-align: center;
-    padding: 8px;
-    padding-top: 15px;
-
-    &__image {
-      width: 115px;
-      margin: 0;
-      font-size: 24px;
-      line-height: 32px;
-      text-align: center;
-      height: 24px;
-      font-weight: 10;
-      height: 20px;
-    }
-
+    padding: 0.5rem;
+    padding-top: 0.938rem;
   }
 
   &__list {
     list-style-type: none;
     padding: 0;
-    font-size: 14px;
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -56,7 +80,7 @@ body {
     &__item {
       width: 50%;
       text-align: center;
-      padding-bottom: 10px;
+      padding-bottom: 0.625rem;
     }
 
     &__item--selected {
@@ -66,158 +90,534 @@ body {
 }
 
 
-// hero section
+// hero section mobile
 
 .hero {
   background-image: url(../assets/Images/hero-bio.jpg);
   height: 200px;
-  background-size: 100%;
+  background-size: $full-width-height;
   background-repeat: no-repeat;
 
   &__image {
-    width: 100%;
+    width: $full-width-height;
     margin: 0;
   }
 
   &__text {
     color: white;
-    left: 16px;
+    left: $padding;
     top: 42%;
     margin: 0px;
-    padding-left: 15px;
-    font-size: 24px;
-    font-family: 'Avenir regular';
-    font-weight: 300;
+    padding-left: 0.938rem;
   }
 
   &__filter {
     background-color: rgba(50, 50, 50, 0.5);
-    height: 100%;
+    height: $full-width-height;
     display: flex;
     align-items: center;
   }
 }
 
 
-// about the musicians section
+// about the musicians section mobile
 .about-info {
   display: flex;
   flex-wrap: wrap;
-  padding-right: 16px;
-  padding-left: 16px;
-
-  &__band {
-    font-size: 14.5px;
-    font-weight: 600;
-  }
+  padding-right: $padding;
+  padding-left: $padding;
 
   &__quote,
   &__by {
-    line-height: 22px;
-    font-size: 14.5px;
-    font-weight: 900;
+    line-height: 1.375rem;
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 0.313rem;
   }
 
-  &__p2,
-  &__p1 {
-    padding-bottom: 16px;
+  &__quote {
+    width: 93%;
+  }
+
+  &__paragraphs__p2,
+  &__paragraphs__p1 {
+    padding-bottom: $padding;
     margin: 0;
-    @include b-f-font-mob;
     width: 97%;
   }
 
-  &__p1 {
+  &__paragraphs__p1 {
     width: 96%;
   }
 
 
   &__header {
-    width: 100%;
-    font-family: 'Avenir light';
+    width: $full-width-height;
     margin: 0;
-    padding-bottom: 16px;
-    padding-top: 24px;
+    padding-bottom: $padding;
+    padding-top: 1.5rem;
   }
 
   &__image {
-    width: 100%;
-    height: 160px;
-    padding-bottom: 16px;
+    width: 97%;
+    height: 20%;
+    padding-bottom: $padding;
   }
 }
 
-// photo gallery
+// photo gallery mobile
 
 .photo-gallery {
   background-color: #FAFAFA;
-  padding: 16px;
+  padding: $padding;
   padding-bottom: 0;
 
   &__header {
     margin: 0;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    @include p-s-header-font-mob;
-    font-weight: 1000;
+    margin-bottom: 0.625rem;
+    margin-top: 0.625rem;
   }
 
-  &__photos {
-    width: 100%;
-    margin-bottom: 10px;
+  &__photos__item {
+    width: $full-width-height;
+    margin-bottom: 0.625rem;
   }
 }
 
 
-// footer section
+// footer section mobile
 
 .footer {
   background-color: #323232;
   color: white;
-  padding: 16px;
+  padding: $padding;
 
-  .footer__block {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  &__body {
 
-    &__icons {
-      height: 22px;
-      width: 41%;
+    &__block {
+      margin-top: 0.625rem;
+      margin-bottom: 0.625rem;
+
+      &__icons {
+        width: 41%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.875rem;
+      }
+
+      &__s-header,
+      &__info {
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+      }
+
+      &__info {
+        font-size: 0.75rem;
+      }
+
+      &__info p {
+        margin-top: 0.313rem;
+        margin-bottom: 0.313rem;
+      }
+
+
+      &__copy {
+        margin-top: 0.925rem;
+        font-size: 0.68rem;
+      }
+
+      &__bandsite-logo {
+        margin-top: 1.563rem;
+      }
+    }
+  }
+}
+
+
+
+// TABLET
+
+@media screen and (min-width: 768px) {
+
+  //Fonts tablet and desktop
+  .nav-bar__list__item,
+  .hero__text,
+  .about-info__header,
+  .footer,
+  .about-info__paragraphs__p1,
+  .about-info__paragraphs__p2,
+  .footer__body__block__copy {
+    font-family: 'Avenir regular';
+  }
+
+  .photo-gallery__header,
+  .footer__body__block__header,
+  .about-info__quote,
+  .about-info__band,
+  .about-info__by,
+  .about-info__header {
+    font-family: 'Avenir light';
+  }
+
+  .nav-bar__list__item {
+    @include labelsANDbuttons-font-d-t;
+  }
+
+  .hero__text {
+    @include p-header-font-d-t;
+  }
+
+  .about-info__header,
+  .photo-gallery__header,
+  .footer__body__block__header {
+    @include s-header-font-d-t;
+  }
+
+  .footer__body__block__s-header,
+  .footer {
+    @include f-font-d-t;
+  }
+
+  .about-info__quote,
+  .about-info__band {
+    @include subHeader-font-d-t;
+  }
+
+  .about-info__by,
+  .about-info__paragraphs__p1,
+  .about-info__paragraphs__p2 {
+    @include b-font-d-t;
+  }
+
+
+
+  // navigation bar
+  nav {
+    display: flex;
+    align-items: center;
+    max-width: 70%;
+    height: $full-width-height;
+  }
+
+  .nav-bar {
+
+    &__band-icon {
+      width: 20%;
+      margin-right: 1.563rem;
+      align-self: center;
+      padding-bottom: 1.25rem;
+    }
+
+    &__list {
+      width: 30%;
+
+      &__item {
+        width: 43%;
+        padding-bottom: 1.563rem;
+        padding-top: 1.25rem;
+      }
+    }
+  }
+
+
+  // hero section
+  .hero {
+    height: 450px;
+    background-position: center -60px;
+
+    &__text {
+      padding-left: 2.5rem;
+    }
+  }
+
+
+  // about musicians
+  .about-info {
+    &__body {
+      padding-left: 5.313rem;
+      padding-right: 5.313rem;
+      padding-bottom: 1.25rem
+    }
+
+    &__band {
+      margin: 0;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    &__quote {
+      width: 100%;
+      font-size: 1.375rem;
+    }
+
+    &__by {
+      margin: 0;
+      margin-top: 0.625rem;
+    }
+
+    &__paragraphs {
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 30px;
-    }
+      flex-wrap: wrap;
+      gap: 0.688rem;
 
-    &__s-header,
-    &__info {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      font-size: 13px;
-    }
+      &__p2,
+      &__p1 {
+        padding-bottom: $padding;
+        margin: 0;
+        width: 49%;
+      }
 
-    &__info {
-      font-weight: 300;
-      font-size: 12px;
-    }
-
-    &__info p {
-      font-weight: 300;
-      margin-top: 5px;
-      margin-bottom: 5px;
+      &__p1 {
+        width: 49%;
+      }
     }
 
     &__header {
-      font-weight: 700;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 1.25rem;
+      margin-top: 2.5rem;
+      margin-left: 1.875rem;
     }
 
-    &__copy {
-      font-size: 11px;
-      font-weight: 300;
+    &__image {
+      width: $full-width-height;
+      height: 30%;
+      margin-bottom: 1.25rem;
+    }
+  }
+
+
+  // photo gallery section
+  .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $padding;
+    padding-bottom: 2.5rem;
+
+    &__header {
+      margin: 0;
+      margin-bottom: 1.25rem;
+      margin-top: 1.875rem;
+      margin-left: 1.875rem;
     }
 
-    &__bandsite-logo {
-      margin-top: 20px;
+    &__photos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.563rem;
+
+      &__item {
+        margin: 0;
+        width: 28%;
+      }
     }
+  }
+
+  // footer
+  .footer {
+    padding: 3.125rem;
+    padding-top: 2.5rem;
+    position: relative;
+
+
+    &__body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 97%;
+
+      &__block1 {
+        margin-left: 1.25rem;
+      }
+
+      &__block {
+        margin-top: 0.625rem;
+        margin-bottom: 0.625rem;
+        max-width: $full-width-height;
+
+
+        &__icons {
+          width: 15%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        &__s-header,
+        &__info {
+          margin-top: 1.25rem;
+          margin-bottom: 1.25rem;
+        }
+
+        &__info p {
+          margin-top: 0.313rem;
+          margin-bottom: 0.313rem;
+        }
+
+        &__header {
+          width: 31%;
+          margin: 0;
+          margin-bottom: 2.5rem;
+          margin-right: 2.188rem;
+        }
+
+        &__copy {
+          width: $full-width-height;
+          margin: 0;
+          margin-top: 0.938rem;
+          font-size: 0.75rem;
+        }
+
+        &__bandsite-logo {
+          position: absolute;
+          left: 78%;
+          top: 15%;
+          margin: 0;
+        }
+      }
+
+      &__block-large {
+        display: flex;
+        flex-wrap: wrap;
+        width: $full-width-height;
+        margin-top: 0.313rem;
+        height: 40px;
+        align-items: center;
+        margin-bottom: 0.938rem;
+      }
+    }
+  }
+
+}
+
+
+
+// DESKTOP
+@media screen and (min-width: 1280px) {
+
+  // navigation bar
+  .nav-bar {
+    height: 80px;
+
+    &__list {
+      width: 16%;
+
+      &__item {
+        padding: 0;
+        padding-top: 3.125rem;
+        padding-bottom: 1.25rem;
+      }
+    }
+
+    &__band-icon {
+      margin: 0;
+      margin-left: 7.5rem;
+      margin-right: 3.75rem;
+      width: 8%;
+      padding-top: 2.188rem;
+    }
+  }
+
+  nav {
+    height: 80%;
+  }
+
+
+  // hero section  
+  .hero {
+    height: 620px;
+
+    &__text {
+      padding-left: 8.125rem;
+    }
+  }
+
+  // about musicians section
+  .about-info {
+    padding: 0;
+    padding-left: 6.875rem;
+    padding-right: 6.875rem;
+
+    &__header {
+      margin-top: 3.125rem;
+      margin-bottom: 1.875rem;
+    }
+
+    &__quote {
+      width: 78%;
+    }
+&__band{
+margin-bottom: 1.25rem;
+}
+
+    &__body {
+      height: 50%;
+      padding-left: 6.875rem;
+      padding-right: 6.875rem;
+    }
+
+    &__image {
+      width: $full-width-height;
+      height: 45%;
+    }
+
+    &__paragraphs {
+      justify-content: space-between;
+
+      &__p1 {
+        width: 49%;
+      }
+    }
+  }
+
+  .photo-gallery {
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+
+    &__photos {
+      width: $full-width-height;
+
+      &__item {
+        width: 27%;
+      }
+
+    }
+
+    &__header {
+      width: $full-width-height;
+      margin-left: 5rem;
+      margin-top: 1.875rem;
+      margin-bottom: 1.875rem;
+    }
+
+  }
+
+
+  // footer section
+  .footer {
+    padding-left: 9.375rem;
+    padding-right: 9.375rem;
+
+    &__body {
+      width: 70%;
+
+      &__block {
+
+        &__copy {
+          font-size: 0.75rem;
+        }
+
+        &__header {
+          width: 23%;
+
+        }
+
+        &__icons {
+          width: 12%;
+        }
+      }
+    }
+
   }
 }
