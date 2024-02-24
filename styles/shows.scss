@@ -247,3 +247,241 @@ body {
     }
   }
 }
+
+// TABLET
+// navigation bar
+@media screen and (min-width: 768px) {
+
+  nav {
+    display: flex;
+    align-items: center;
+    max-width: 70%;
+    height: $full-width-height;
+  }
+
+  .nav-bar {
+
+    &__band-icon {
+      width: 20%;
+      margin-right: 1.563rem;
+      align-self: center;
+      padding-bottom: 1.25rem;
+      padding-left: 20px;
+
+    }
+
+    &__list {
+      width: 30%;
+
+      &__item {
+        width: 43%;
+        padding-bottom: 1.563rem;
+        padding-top: 1.25rem;
+      }
+    }
+  }
+
+
+  // hero section
+  .hero {
+    width: 100vw;
+    height: 400px;
+
+    &__filter {
+      box-sizing: border-box;
+      padding: 40px;
+
+      &__header {
+        @include p-header-font-d-t;
+        width: 80%;
+        margin-top: 15px;
+      }
+
+      &__text {
+        @include subHeader-font-d-t;
+        font-weight: 300;
+      }
+
+      &__sound {
+        width: 62%;
+        height: 30%;
+      }
+    }
+  }
+
+
+  // SHOWS SECTION
+  .shows {
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 30px;
+
+    &__cards {
+      display: flex;
+      padding: 30px 40px 30px 40px;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      text-align: left;
+      box-sizing: border-box;
+
+      &__info {
+        margin: 0;
+        width: 130px;
+        @include b-font-d-t;
+      }
+
+      &__details {
+        @include labelsANDbuttons-font-d-t;
+        position: absolute;
+        top: 120px;
+
+
+        &--hidden {
+          display: none;
+        }
+      }
+
+      &__submit {
+        width: 145px;
+        height: 40px;
+        margin: 0;
+
+        &__button {
+          @include labelsANDbuttons-font-d-t;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+        }
+      }
+    }
+
+
+    &__header {
+      justify-self: start;
+      margin: 40px 0 55px 40px;
+      @include s-header-font-d-t;
+    }
+
+
+
+  }
+
+  // footer
+  .footer {
+    padding: 3.125rem;
+    padding-top: 2.5rem;
+    position: relative;
+
+    &__body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 97%;
+
+      &__block1 {
+        margin-left: 1.25rem;
+      }
+
+      &__block {
+        margin-top: 0.625rem;
+        margin-bottom: 0.625rem;
+        max-width: $full-width-height;
+
+
+        &__icons {
+          width: 15%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        &__s-header,
+        &__info {
+          margin-top: 1.25rem;
+          margin-bottom: 1.25rem;
+        }
+
+        &__info p {
+          margin-top: 0.313rem;
+          margin-bottom: 0.313rem;
+        }
+
+        &__header {
+          width: 31%;
+          margin: 0;
+          margin-bottom: 2.5rem;
+          margin-right: 2.188rem;
+        }
+
+        &__copy {
+          width: $full-width-height;
+          margin: 0;
+          margin-top: 0.938rem;
+          font-size: 0.75rem;
+        }
+
+        &__bandsite-logo {
+          position: absolute;
+          left: 78%;
+          top: 15%;
+          margin: 0;
+        }
+      }
+
+      &__block-large {
+        display: flex;
+        flex-wrap: wrap;
+        width: $full-width-height;
+        margin-top: 0.313rem;
+        height: 40px;
+        align-items: center;
+        margin-bottom: 0.938rem;
+      }
+    }
+  }
+
+}
+
+// DESKTOP
+@media screen and (min-width: 1280px) {
+
+  // NAVIGATION BAR
+  .nav-bar {
+    &__band-icon {
+      margin: 0;
+      margin-left: 60px;
+      width: 200px;
+    }
+
+    &__list {
+      width: 140px;
+    }
+  }
+
+.hero{
+height: 520px;
+
+&__text{
+width:600px;
+}
+
+&__filter{
+  display: flex;
+align-items: center;
+justify-content: space-between;
+padding-left: 120px;
+padding-right: 120px;
+
+
+&__sound{
+width: 40%;
+}
+}
+}
+
+
+
+}
