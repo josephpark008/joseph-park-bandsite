@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
+}
+/* fonts mobile */
+body {
+  margin: 0;
+  font-family: "Avenir";
+}
+
+.nav-bar__list__item {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.hero__text,
+.footer__body__block__header {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.footer__body__block__s-header,
+.footer__body__block,
+.footer__body__block__copy {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.footer__body__block__header {
+  font-weight: 400;
+}
+
+.nav-bar__list__item {
+  font-weight: 400;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* navigation bar mobile */
+.nav-bar nav,
+.nav-bar,
+.nav-bar__list {
+  width: 100%;
+}
+
+.nav-bar {
+  background-color: #323232;
+  color: #AFAFAF;
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-bar__band-icon {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  padding-top: 1rem;
+}
+.nav-bar__list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  align-items: center;
+  text-decoration: none;
+}
+.nav-bar__list__item {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 0.625rem;
+  text-decoration: none;
+  color: #AFAFAF;
+}
+.nav-bar__list__item:hover {
+  border-bottom: 3px solid white;
+}
+.nav-bar__list__item:active {
+  color: white;
+  font-weight: bold;
+}
+
+.hero {
+  background-image: url(../assets/Images/hero-shows.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 250px;
+}
+.hero__filter {
+  box-sizing: border-box;
+  background-color: rgba(50, 50, 50, 0.5);
+  height: 100%;
+  width: 100%;
+  padding: 30px 15px 25px 15px;
+}
+.hero__filter__header {
+  color: white;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  width: 80%;
+}
+.hero__filter__text {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0;
+  color: white;
+  font-weight: 400;
+}
+.hero__filter__sound {
+  width: 100%;
+  height: 35%;
+}
+
+.shows {
+  box-sizing: border-box;
+  padding-bottom: 15px;
+}
+.shows__header {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  margin: 25px 0 0 23px;
+}
+.shows__cards {
+  padding: 23px;
+  padding-top: 15px;
+  border-bottom: solid 1px #E1E1E1;
+}
+.shows__cards__details {
+  color: #AFAFAF;
+  font-size: 13px;
+  line-height: 18px;
+  font-size: 9px;
+  font-weight: 600;
+  margin: 0;
+}
+.shows__cards__info {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  font-size: 12.3px;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+}
+.shows__cards__info--bold {
+  font-weight: 600;
+}
+.shows__cards__submit {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 5vh;
+}
+.shows__cards__submit__button {
+  width: 100%;
+  height: 100%;
+  background-color: #323232;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin: 10px 0 100px 0;
+}
+.shows__cards__submit__button span {
+  height: 100%;
+  color: white;
+  font-size: 15px;
+}
+
+.footer {
+  background-color: #323232;
+  color: white;
+  padding: 16px;
+}
+.footer__body__block {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+.footer__body__block__header {
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 15px;
+}
+.footer__body__block__icons {
+  width: 41%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.footer__body__block__s-header, .footer__body__block__info {
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+}
+.footer__body__block__info p {
+  margin: 0;
+}
+.footer__body__block__s-header {
+  font-weight: 600;
+}
+.footer__body__block__info {
+  font-size: 0.75rem;
+  margin: 0;
+}
+.footer__body__block__info--bold {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.footer__body__block__copy {
+  margin-top: 0.925rem;
+  font-size: 0.68rem;
+}
+.footer__body__block__bandsite-logo {
+  margin-top: 1.563rem;
+}/*# sourceMappingURL=shows.css.map */
