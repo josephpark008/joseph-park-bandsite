@@ -1,14 +1,17 @@
 @font-face {
-  font-family: "Avenir regular";
+  font-family: "Avenir";
   src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
+  font-weight: 400;
 }
 @font-face {
-  font-family: "Avenir demi";
+  font-family: "Avenir";
   src: url("../assets/fonts/AvenirNextLTPro-Demi.otf");
+  font-weight: 600;
 }
 @font-face {
-  font-family: "Avenir bold";
+  font-family: "Avenir";
   src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
 }
 /* fonts mobile */
 body {
@@ -28,7 +31,6 @@ body {
 .footer__body__block__header {
   font-size: 24px;
   line-height: 32px;
-  font-weight: 700;
 }
 
 .about-info__paragraphs__p1,
@@ -40,7 +42,6 @@ body {
 .about-info__by {
   font-size: 13px;
   line-height: 18px;
-  font-weight: 400;
 }
 
 .about-info__quote,
@@ -233,38 +234,32 @@ body {
   .nav-bar__list__item {
     font-size: 12px;
     line-height: 20px;
-    font-weight: 700;
   }
   .hero__text {
     font-size: 60px;
     line-height: 68px;
-    font-weight: 700;
   }
   .about-info__header,
   .photo-gallery__header,
   .footer__body__block__header {
     font-size: 36px;
     line-height: 44px;
-    font-weight: 700;
   }
   .footer__body__block__s-header,
   .footer {
     font-size: 14px;
     line-height: 20px;
-    font-weight: 400;
   }
   .about-info__quote,
   .about-info__band {
     font-size: 24px;
     line-height: 32px;
-    font-weight: 600;
   }
   .about-info__by,
   .about-info__paragraphs__p1,
   .about-info__paragraphs__p2 {
     font-size: 14px;
     line-height: 22px;
-    font-weight: 400;
   }
   nav {
     display: flex;

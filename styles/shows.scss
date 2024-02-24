@@ -1,0 +1,249 @@
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+@use './partials/typography' as *;
+
+/* fonts mobile */
+body {
+  margin: 0;
+  font-family: 'Avenir';
+}
+
+.nav-bar__list__item {
+  @include subHeader-font-mob;
+}
+
+.hero__text,
+.footer__body__block__header {
+  @include p-s-header-font-mob;
+}
+
+
+.footer__body__block__s-header,
+.footer__body__block,
+.footer__body__block__copy {
+  @include b-f-font-mob;
+}
+
+
+.footer__body__block__header {
+  font-weight: 400;
+}
+
+.nav-bar__list__item {
+  font-weight: 400;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* navigation bar mobile */
+.nav-bar nav,
+.nav-bar,
+.nav-bar__list {
+  width: $full-width-height;
+}
+
+.nav-bar {
+  background-color: #323232;
+  color: #AFAFAF;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__band-icon {
+    width: $full-width-height;
+    text-align: center;
+    padding: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    align-items: center;
+    text-decoration: none;
+
+    &__item {
+      width: 50%;
+      text-align: center;
+      padding-bottom: 0.625rem;
+      text-decoration: none;
+      color: #AFAFAF;
+
+      &:hover {
+        border-bottom: 3px solid white;
+      }
+
+      &:active {
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+// hero section
+.hero {
+  background-image: url(../assets/Images/hero-shows.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 250px;
+
+  &__filter {
+    box-sizing: border-box;
+    background-color: rgba(50, 50, 50, 0.5);
+    height: 100%;
+    width: 100%;
+    padding: 30px 15px 25px 15px;
+
+
+    &__header {
+      color: white;
+      @include p-s-header-font-mob;
+      font-weight: 600;
+      width: 80%;
+    }
+
+    &__text {
+      @include b-f-font-mob;
+      margin: 0;
+      color: white;
+      font-weight: 400;
+    }
+
+    &__sound {
+      width: 100%;
+      height: 35%;
+    }
+  }
+}
+
+
+// SHOWS SECTION
+.shows {
+  box-sizing: border-box;
+  padding-bottom: 15px;
+
+  &__header {
+    @include p-s-header-font-mob;
+    font-weight: 600;
+    margin: 25px 0 0 23px
+  }
+
+  &__cards {
+    padding: 23px;
+    padding-top: 15px;
+    border-bottom: solid 1px #E1E1E1;
+
+
+
+    &__details {
+      color: #AFAFAF;
+      @include b-f-font-mob;
+      font-size: 9px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    &__info {
+      @include subHeader-font-mob;
+      font-size: 12.3px;
+      margin: 0 0 10px 0;
+      font-weight: 400;
+
+      &--bold {
+        font-weight: 600;
+      }
+    }
+
+    &__submit {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      height: 5vh;
+
+      &__button {
+        width: 100%;
+        height: 100%;
+        background-color: #323232;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        margin: 10px 0 100px 0;
+      }
+
+      &__button span {
+        height: 100%;
+        color: white;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+//footer
+.footer {
+  background-color: #323232;
+  color: white;
+  padding: $padding;
+
+  &__body {
+
+    &__block {
+      margin-top: 0.625rem;
+      margin-bottom: 0.625rem;
+
+      &__header {
+        font-weight: 600;
+        margin: 0;
+        margin-bottom: 15px;
+      }
+
+      &__icons {
+        width: 41%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+
+      &__s-header,
+      &__info {
+        margin-top: 1.25rem;
+        margin-bottom: 1rem;
+      }
+
+      &__info p {
+        margin: 0;
+      }
+
+      &__s-header {
+        font-weight: 600;
+      }
+
+      &__info {
+        font-size: 0.75rem;
+        margin: 0;
+
+        &--bold {
+          margin-top: 15px;
+          margin-bottom: 25px;
+        }
+      }
+
+      &__copy {
+        margin-top: 0.925rem;
+        font-size: 0.68rem;
+      }
+
+      &__bandsite-logo {
+        margin-top: 1.563rem;
+      }
+    }
+  }
+}
