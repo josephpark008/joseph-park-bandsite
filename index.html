@@ -19,7 +19,7 @@
         </div>
         <nav>
           <ul class="nav-bar__list">
-            <a href="" class="nav-bar__list__item">
+            <a href="" class="nav-bar__list__item nav-bar__list__item--selected">
               <li>Biography</li>
             </a>
             <a href="" class="nav-bar__list__item">
@@ -86,57 +86,28 @@
       </section>
     </section>
 
-    <!-- <section>
-      <h2>Join the Conversation</h2>
-      <section>
-        <p>NAME</p>
-        <img src="" alt="">
-        <p>Enter your name</p>
-        <p>Comment</p>
-        <p>Add a new comment</p>
-        <button>COMMENT</button>
-      </section>
+    <!-- COMMENT SECTION -->
 
-      <section>
-        <img src="" alt="">
-        <div>
-          <p>Victor Pinto</p>
-          <p>This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic
-            work deserves reverence. Let us appreciate this for what it is and what it contains.
-          </p>
-        </div>
-        <p>11/02/2023</p>
-      </section>
-      <hr>
-      <section>
-        <img src="" alt="">
-        <div>
-          <p>Victor Pinto</p>
-          <p>This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic
-            work deserves reverence. Let us appreciate this for what it is and what it contains.
-          </p>
-        </div>
-        <p>11/02/2023</p>
-      </section>
-      <hr>
+    <form class="comments">
+      <h2 class="comments__header">Join the Conversation</h2>
 
-      <section>
-        <img src="" alt="">
-        <div>
-          <p>Victor Pinto</p>
-          <p>This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic
-            work deserves reverence. Let us appreciate this for what it is and what it contains.
-          </p>
-        </div>
-        <p>11/02/2023</p>
+      <div class="avatar">
+      </div>
+      <div class="input">
+        <p class="input__name-label" for="name">NAME</p>
+        <input class="input__name" type="text" name="name" id="name" placeholder="Enter your name">
+        <p class="input__comment-label" for="comment">COMMENT</p>
+        <textarea class="input__comment" name="comment" id="comment" cols="30" rows="5"
+          placeholder="Add a new comment"></textarea>
+        <button class="input__button">COMMENT</button>
+      </div>
       </section>
-      <hr>
+    </form>
 
-    </section> -->
 
     <footer>
 
-      
+
       <section class="footer">
         <section class="footer__body__block footer__body__block-large">
           <h2 class="footer__body__block__header">Get in Touch</h2>
@@ -151,28 +122,30 @@
 
         </section>
         <section class="footer__body">
-          <section class="footer__body__block">
-            <p class="footer__body__block__s-header">The Bees Knees Management</p>
-            <span class="footer__body__block__info">
-              <p>503 Broadway Penthouse,</p>
-              <p>New York, NY 10012, USA</p>
-            </span>
-            <p class="footer__body__block__info">info@thebeesknees.com</p>
-          </section>
+          <section class="footer__body-top">
+            <section class="footer__body__block">
+              <p class="footer__body__block__s-header">The Bees Knees Management</p>
+              <span class="footer__body__block__info">
+                <p>503 Broadway Penthouse,</p>
+                <p>New York, NY 10012, USA</p>
+              </span>
+              <p class="footer__body__block__info">info@thebeesknees.com</p>
+            </section>
 
-          <section class="footer__body__block">
-            <p class="footer__body__block__s-header">Limitless Artist Group</p>
-            <span class="footer__body__block__info">
-              <p>Booking Agent for</p>
-              <p>US / South America / Japan</p>
-            </span>
-            <p class="footer__body__block__info">bookings@limitlessag.com</p>
-          </section>
+            <section class="footer__body__block">
+              <p class="footer__body__block__s-header">Limitless Artist Group</p>
+              <span class="footer__body__block__info">
+                <p>Booking Agent for</p>
+                <p>US / South America / Japan</p>
+              </span>
+              <p class="footer__body__block__info">bookings@limitlessag.com</p>
+            </section>
 
-          <section class="footer__body__block footer__body__block1">
-            <p class="footer__body__block__s-header">ARCH Entertainment</p>
-            <span class="footer__body__block__info">Booking Agent for<p> UK / EU / AU</p></span>
-            <p class="footer__body__block__info">bookings@archentertainment.com</p>
+            <section class="footer__body__block footer__body__block1">
+              <p class="footer__body__block__s-header">ARCH Entertainment</p>
+              <span class="footer__body__block__info">Booking Agent for<p> UK / EU / AU</p></span>
+              <p class="footer__body__block__info">bookings@archentertainment.com</p>
+            </section>
           </section>
           <a href="./index.html"><img class="footer__body__block__bandsite-logo" src="./assets/logos/Logo-bandsite.svg"
               alt="bandsite logo"></a>

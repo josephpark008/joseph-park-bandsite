@@ -5,6 +5,7 @@
 /* fonts mobile */
 body {
   margin: 0;
+  font-family: 'Avenir';
 }
 
 .nav-bar__list__item,
@@ -29,24 +30,9 @@ body {
   @include b-f-font-mob;
 }
 
-.about-info__quote,
-.about-info__by,
-.hero__text,
-.about-info__header,
-.photo-gallery__header,
-.footer__body__block__header {
-  font-family: 'Avenir demi';
-}
 
-.nav-bar__list__item,
-.about-info__paragraphs__p1,
-.about-info__paragraphs__p2,
-.footer__body__block__s-header,
-.footer__body__block,
-.footer__body__block__copy,
-.about-info__band {
-  font-family: 'Avenir regular';
-}
+
+
 
 
 /* navigation bar mobile */
@@ -84,14 +70,15 @@ body {
       padding-bottom: 0.625rem;
       text-decoration: none;
       color: #AFAFAF;
+      font-weight: 300;
+
+      &--selected {
+        border-bottom: 3px solid white;
+        color: white;
+      }
 
       &:hover {
         border-bottom: 3px solid white;
-      }
-
-      &:active {
-        color: white;
-        font-weight: bold;
       }
     }
   }
@@ -118,6 +105,7 @@ body {
     top: 42%;
     margin: 0px;
     padding-left: 0.938rem;
+    font-weight: 600;
   }
 
   &__filter {
@@ -141,6 +129,7 @@ body {
     line-height: 1.375rem;
     margin: 0;
     margin-bottom: 0.313rem;
+    font-weight: 600;
   }
 
   &__quote {
@@ -164,6 +153,7 @@ body {
     margin: 0;
     padding-bottom: $padding;
     padding-top: 1.5rem;
+    font-weight: 600;
   }
 
   &__image {
@@ -184,6 +174,7 @@ body {
     margin: 0;
     margin-bottom: 0.625rem;
     margin-top: 0.625rem;
+    font-weight: 600;
   }
 
   &__photos__item {
@@ -193,9 +184,59 @@ body {
   }
 }
 
+// COMMENT SECTION
+
+.comments {
+  height: 300px;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__header {
+    width: 100%;
+    height: 10%;
+    font-weight: 600;
+  }
+}
+
+.avatar {
+  background-image: url(../assets/Images/Mohan-muruge.jpg);
+  background-repeat: no-repeat;
+  background-size: 150%;
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  margin-right: 15px;
+  margin-top: 35px;
+}
+
+.input {
+  width: 80%;
+
+  &___comment,
+  &__name {
+    width: 222px;
+  }
+
+  &__name-label,
+  &__comment-label {
+    color: #AFAFAF;
+    @include b-f-font-mob;
+    width: 100%;
+  }
+
+  &__button {
+    background-color: #323232;
+    color: white;
+    border: 5px;
+    width: 100%;
+  }
+
+}
 
 // footer section mobile
 
+//footer
 .footer {
   background-color: #323232;
   color: white;
@@ -207,28 +248,42 @@ body {
       margin-top: 0.625rem;
       margin-bottom: 0.625rem;
 
+      &__header {
+        font-weight: 600;
+        margin: 0;
+        margin-bottom: 15px;
+      }
+
       &__icons {
         width: 41%;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 1.875rem;
+        margin-bottom: 1rem;
       }
 
       &__s-header,
       &__info {
         margin-top: 1.25rem;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1rem;
+      }
+
+      &__info p {
+        margin: 0;
+      }
+
+      &__s-header {
+        font-weight: 600;
       }
 
       &__info {
         font-size: 0.75rem;
-      }
+        margin: 0;
 
-      &__info p {
-        margin-top: 0.313rem;
-        margin-bottom: 0.313rem;
+        &--bold {
+          margin-top: 15px;
+          margin-bottom: 25px;
+        }
       }
-
 
       &__copy {
         margin-top: 0.925rem;
@@ -249,24 +304,6 @@ body {
 @media screen and (min-width: 768px) {
 
   //Fonts tablet and desktop
-  .nav-bar__list__item,
-  .hero__text,
-  .about-info__header,
-  .footer,
-  .about-info__paragraphs__p1,
-  .about-info__paragraphs__p2,
-  .footer__body__block__copy {
-    font-family: 'Avenir regular';
-  }
-
-  .photo-gallery__header,
-  .footer__body__block__header,
-  .about-info__quote,
-  .about-info__band,
-  .about-info__by,
-  .about-info__header {
-    font-family: 'Avenir demi';
-  }
 
   .nav-bar__list__item {
     @include labelsANDbuttons-font-d-t;
@@ -438,12 +475,17 @@ body {
     padding-top: 2.5rem;
     position: relative;
 
-
     &__body {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      width: 97%;
+      width: 100%;
+
+      &-top {
+        width: 100%;
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
 
       &__block1 {
         margin-left: 1.25rem;
@@ -454,30 +496,44 @@ body {
         margin-bottom: 0.625rem;
         max-width: $full-width-height;
 
+        &--large {
+          display: flex;
+          flex-wrap: wrap;
+          height: 50px;
+          margin: 0;
+          align-content: end;
+          margin-bottom: 10px;
+        }
 
         &__icons {
           width: 15%;
           display: flex;
           justify-content: space-between;
           align-items: center;
+          margin: 0;
+          align-items: end;
         }
 
         &__s-header,
         &__info {
           margin-top: 1.25rem;
           margin-bottom: 1.25rem;
+          font-size: 14px;
         }
+
 
         &__info p {
           margin-top: 0.313rem;
           margin-bottom: 0.313rem;
+          font-weight: 300;
         }
 
         &__header {
           width: 31%;
           margin: 0;
-          margin-bottom: 2.5rem;
-          margin-right: 2.188rem;
+          @include s-header-font-d-t;
+          margin-right: 20px;
+          height: 38px;
         }
 
         &__copy {
@@ -489,7 +545,7 @@ body {
 
         &__bandsite-logo {
           position: absolute;
-          left: 78%;
+          left: 79%;
           top: 15%;
           margin: 0;
         }
@@ -564,7 +620,7 @@ body {
     }
 
     &__quote {
-      width: 78%;
+      width: 73%;
     }
 
     &__band {
@@ -593,8 +649,8 @@ body {
   }
 
   .photo-gallery {
-    padding-left: 4.375rem;
-    padding-right: 4.375rem;
+    padding-left: 30px;
+    padding-right: 30px;
 
     &__photos {
       width: $full-width-height;
@@ -623,25 +679,34 @@ body {
 
   // footer section
   .footer {
-    padding-left: 9.375rem;
-    padding-right: 9.375rem;
+    padding-left: 120px;
+    padding-right: 120px;
 
     &__body {
       width: 78%;
 
+      &-top {
+        gap: 60px;
+      }
+
       &__block {
 
         &__copy {
-          font-size: 0.75rem;
+          font-size: 14px;
         }
 
         &__header {
           width: 23%;
-
+          margin: 0;
+          margin-right: 18px;
         }
 
         &__icons {
-          width: 12%;
+          width: 11%;
+        }
+
+        &__bandsite-logo {
+          left: 81%;
         }
       }
     }
