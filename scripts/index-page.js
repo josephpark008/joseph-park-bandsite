@@ -120,3 +120,12 @@ function renderComments(comments) {
   });
 }
 
+function text(className, textInput) {
+  const textAdd = document.querySelector(className);
+  textAdd.innerText = textInput;
+}
+
+text(".input__name-label", "NAME");
+text(".input__comment-label", "COMMENT");
+text(".comments-header", "Join the Conversation");
+text(".input__button", "COMMENT");
