@@ -6,7 +6,6 @@
 body {
   margin: 0;
   font-family: 'Avenir';
-  padding: 0;
 }
 
 
@@ -28,7 +27,7 @@ body {
     width: $full-width-height;
     text-align: center;
     padding: 0.5rem;
-    padding-top: 1rem;
+    padding-top: 0.938rem;
   }
 
   &__list {
@@ -46,19 +45,22 @@ body {
       padding-bottom: 0.625rem;
       text-decoration: none;
       color: #AFAFAF;
+      font-weight: 300;
 
       &--selected {
         border-bottom: 3px solid white;
         color: white;
+        font-weight: 600;
       }
-
 
       &:hover {
         border-bottom: 3px solid white;
+        color: white;
       }
     }
   }
 }
+
 
 
 // hero section
@@ -67,7 +69,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 280px;
+  height: 17.5rem;
   box-sizing: border-box;
 
   &__filter {
@@ -75,7 +77,7 @@ body {
     background-color: rgba(50, 50, 50, 0.5);
     height: 100%;
     width: 100%;
-    padding: 30px 20px 25px 15px;
+    padding: 1.875rem 1.25rem 1.563rem 0.938rem;
 
 
     &__header {
@@ -103,33 +105,42 @@ body {
 // SHOWS SECTION
 .shows {
   box-sizing: border-box;
-  padding-bottom: 15px;
+  padding-bottom: 0.938rem;
 
   &__header {
     @include p-s-header-font-mob;
     font-weight: 600;
-    margin: 25px 0 0 23px
+    margin: 1.563rem 0 0 1.438rem;
   }
 
+
   &__cards {
-    padding: 23px;
-    padding-top: 15px;
+    padding: 1.438rem;
+    padding-top: 0.938rem;
     border-bottom: solid 1px #E1E1E1;
+
+    &:hover {
+      background-color: #FAFAFA;
+    }
+
+    &:active {
+      background-color: #E1E1E1;
+    }
 
 
 
     &__details {
       color: #AFAFAF;
       @include b-f-font-mob;
-      font-size: 9px;
+      font-size: 0.563rem;
       font-weight: 600;
       margin: 0;
     }
 
     &__info {
       @include subHeader-font-mob;
-      font-size: 12.3px;
-      margin: 0 0 10px 0;
+      font-size: 0.75rem;
+      margin: 0 0 0.625rem 0;
       font-weight: 400;
 
       &--bold {
@@ -139,9 +150,9 @@ body {
 
     &__submit {
       display: flex;
-      width: 100%;
+      width: 17.125rem;
       justify-content: center;
-      height: 5vh;
+      height: 3vh;
 
       &__button {
         width: 100%;
@@ -150,13 +161,13 @@ body {
         color: white;
         border: none;
         border-radius: 4px;
-        margin: 10px 0 100px 0;
       }
 
       &__button span {
         height: 100%;
         color: white;
-        font-size: 15px;
+        @include b-font-d-t;
+        font-weight: 600;
       }
     }
   }
@@ -177,7 +188,7 @@ body {
       &__header {
         font-weight: 600;
         margin: 0;
-        margin-bottom: 15px;
+        margin-bottom: 0.938rem;
       }
 
       &__icons {
@@ -206,8 +217,8 @@ body {
         margin: 0;
 
         &--bold {
-          margin-top: 15px;
-          margin-bottom: 25px;
+          margin-top: 0.938rem;
+          margin-bottom: 1.563rem;
         }
       }
 
@@ -227,6 +238,39 @@ body {
 // navigation bar
 @media screen and (min-width: 768px) {
 
+  .nav-bar__list__item {
+    @include labelsANDbuttons-font-d-t;
+  }
+
+  .hero__text {
+    @include p-header-font-d-t;
+  }
+
+  .about-info__header,
+  .photo-gallery__header,
+  .footer__body__block__header {
+    @include s-header-font-d-t;
+  }
+
+  .footer__body__block__s-header,
+  .footer {
+    @include f-font-d-t;
+  }
+
+  .about-info__quote,
+  .about-info__band {
+    @include subHeader-font-d-t;
+  }
+
+  .about-info__by,
+  .about-info__paragraphs__p1,
+  .about-info__paragraphs__p2 {
+    @include b-font-d-t;
+  }
+
+
+
+  // navigation bar
   nav {
     display: flex;
     align-items: center;
@@ -241,8 +285,6 @@ body {
       margin-right: 1.563rem;
       align-self: center;
       padding-bottom: 1.25rem;
-      padding-left: 20px;
-
     }
 
     &__list {
@@ -265,13 +307,13 @@ body {
     height: 440px;
 
     &__filter {
-      padding: 40px;
-      padding-bottom: 100px;
+      padding: 2.5rem;
+      padding-bottom: 6.25rem;
 
       &__header {
         @include p-header-font-d-t;
         width: 80%;
-        margin-top: 15px;
+        margin-top: 0.938rem;
       }
 
       &__text {
@@ -289,31 +331,38 @@ body {
 
   // SHOWS SECTION
   .shows {
-    height: 650px;
+    height: 40.625rem;
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-bottom: 30px;
+    padding-bottom: 1.875rem;
+
+    &__block {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
     &__cards {
+      width: 93%;
       display: flex;
-      padding: 30px 40px 30px 40px;
+      padding: 1.875rem 1.25rem 1.875rem 1.25rem;
       justify-content: space-between;
       align-items: center;
-      height: 80px;
+      height: 5rem;
       text-align: left;
       box-sizing: border-box;
 
       &__info {
         margin: 0;
-        width: 130px;
+        width: 8.125rem;
         @include b-font-d-t;
       }
 
       &__details {
         @include labelsANDbuttons-font-d-t;
         position: absolute;
-        top: 120px;
+        top: 7.5rem;
 
 
         &--hidden {
@@ -322,8 +371,8 @@ body {
       }
 
       &__submit {
-        width: 145px;
-        height: 40px;
+        width: 9.063rem;
+        height: 2.5rem;
         margin: 0;
 
         &__button {
@@ -338,7 +387,7 @@ body {
 
     &__header {
       justify-self: start;
-      margin: 40px 0 55px 40px;
+      margin: 2.5rem 0 3.438rem 2.5rem;
       @include s-header-font-d-t;
     }
 
@@ -356,8 +405,8 @@ body {
       display: flex;
       flex-wrap: wrap;
       width: 100%;
-      gap: 30px;
-      height: 180px;
+      gap: 1.875rem;
+      height: 11.25rem;
 
 
 
@@ -373,10 +422,10 @@ body {
         &--large {
           display: flex;
           flex-wrap: wrap;
-          height: 50px;
+          height: 3.125rem;
           margin: 0;
           align-content: end;
-          margin-bottom: 10px;
+          margin-bottom: 0.625rem;
         }
 
         &__icons {
@@ -392,7 +441,7 @@ body {
         &__info {
           margin-top: 1.25rem;
           margin-bottom: 1.25rem;
-          font-size: 14px;
+          @include b-font-d-t;
         }
 
 
@@ -406,15 +455,15 @@ body {
           width: 31%;
           margin: 0;
           @include s-header-font-d-t;
-          margin-right: 20px;
-          height: 38px;
+          margin-right: 1.25rem;
+          height: 2.375rem;
         }
 
         &__copy {
           width: $full-width-height;
           margin: 0;
           margin-top: 0.938rem;
-          font-size: 0.75rem;
+          @include labelsANDbuttons-font-d-t;
         }
 
         &__bandsite-logo {
@@ -430,7 +479,7 @@ body {
         flex-wrap: wrap;
         width: $full-width-height;
         margin-top: 0.313rem;
-        height: 40px;
+        height: 2.5rem;
         align-items: center;
         margin-bottom: 0.938rem;
       }
@@ -442,36 +491,50 @@ body {
 // DESKTOP
 @media screen and (min-width: 1280px) {
 
-  // NAVIGATION BAR
+  // navigation bar
   .nav-bar {
-    &__band-icon {
-      margin: 0;
-      margin-left: 60px;
-      width: 200px;
-    }
+    height: 5rem;
 
     &__list {
-      width: 140px;
+      width: 16%;
+
+      &__item {
+        padding: 0;
+        padding-top: 3.125rem;
+        padding-bottom: 1.25rem;
+      }
+    }
+
+    &__band-icon {
+      margin: 0;
+      margin-left: 7.5rem;
+      margin-right: 3.75rem;
+      width: 8%;
+      padding-top: 2.188rem;
     }
   }
 
+  nav {
+    height: 80%;
+  }
+
   .hero {
-    height: 600px;
+    height: 37.5rem;
     background-position: center 28%;
 
     &__text {
-      width: 600px;
+      width: 37.5rem;
     }
 
     &__filter {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-left: 120px;
-      padding-right: 120px;
+      padding-left: 7.5rem;
+      padding-right: 7.5rem;
 
       &__text {
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
       }
 
       &__header {
@@ -482,7 +545,7 @@ body {
         width: 40%;
         height: 30%;
         margin: 0;
-        margin-top: 20px;
+        margin-top: 1.25rem;
       }
     }
   }
@@ -490,7 +553,7 @@ body {
   // SHOWS SECTION
   .shows {
     padding: 0;
-    padding-top: 15px;
+    padding-top: 0.938rem;
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -503,51 +566,51 @@ body {
       flex-direction: column;
       justify-content: center;
       align-content: center;
-      width: 63%;
-      padding-top: 80px;
+      width: 67%;
+      padding-top: 5rem;
 
     }
 
     &__header {
       height: 100%;
       width: 10%;
-      margin-left: 120px;
+      margin-left: 7.5rem;
     }
 
     &__cards {
       width: 97%;
-      padding: 0;
-      padding-right: 0;
+      padding: 1.25rem;
+      padding-right: 1.25rem;
 
       &__info--bold {
-        padding-right: 90px;
+        padding-right: 5.625rem;
       }
 
       &__details {
-        top: 72px;
+        top: 4.5rem;
       }
     }
   }
 
   // footer section
   .footer {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
 
     &__body {
       width: 78%;
-      gap: 66px;
+      gap: 4.125rem;
 
       &__block {
 
         &__copy {
-          font-size: 14px;
+          @include b-font-d-t;
         }
 
         &__header {
           width: 23%;
           margin: 0;
-          margin-right: 18px;
+          margin-right: 1.125rem;
         }
 
         &__icons {
