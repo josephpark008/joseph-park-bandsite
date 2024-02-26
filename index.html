@@ -7,6 +7,7 @@
   <title>Band Site</title>
   <link rel="stylesheet" href="./styles/bio.css">
   <link rel="stylesheet" href="./styles/bio.scss">
+  <script defer src="./scripts/index-page.js"></script>
 </head>
 
 <body>
@@ -19,10 +20,10 @@
         </div>
         <nav>
           <ul class="nav-bar__list">
-            <a href="" class="nav-bar__list__item nav-bar__list__item--selected">
+            <a href="./index.html" class="nav-bar__list__item nav-bar__list__item--selected">
               <li>Biography</li>
             </a>
-            <a href="" class="nav-bar__list__item">
+            <a href="./pages/shows.html" class="nav-bar__list__item">
               <li>Shows</li>
             </a>
           </ul>
@@ -88,10 +89,10 @@
 
     <!-- COMMENT SECTION -->
 
-    <form class="comments">
-      <h2 class="comments__header">Join the Conversation</h2>
+    <form id="comments" class="comments">
+      <h2 class="comments-header">Join the Conversation</h2>
 
-      <div class="avatar">
+      <div class="comments__avatar">
       </div>
       <div class="input">
         <p class="input__name-label" for="name">NAME</p>
@@ -103,6 +104,8 @@
       </div>
       </section>
     </form>
+    <div id="posted">
+    </div>
 
 
     <footer>
