@@ -7,6 +7,7 @@
   <title>Band Site</title>
   <link rel="stylesheet" href="../styles/shows.css">
   <link rel="stylesheet" href="../styles/shows.scss">
+  <script defer src="../scripts/build-shows-page.js"></script>
 </head>
 
 
@@ -44,85 +45,87 @@
       </div>
     </div>
 
+    <!-- CODED EVERYTHING IN JS BUT HAD TROUBLE WITH 'DETAILS' SO I KEPT HTML FOR NOW -->
     <section class="shows">
-      <h1 class="shows__header">Shows</h1>
+      <h1 class="shows__header"></h1>
       <div class="shows__block">
         <section class="shows__cards">
           <div class="shows__cards__blocks">
             <p class="shows__cards__details">DATE</p>
-            <p class="shows__cards__info shows__cards__info--bold">Mon Sept 09 2024</p>
+            <p class="shows__cards__info shows__cards__info--bold"></p>
           </div>
           <div class="shows__cards__blocks">
             <p class="shows__cards__details">VENUE</p>
-            <p class="shows__cards__info">Ronald Lane</p>
+            <p class="shows__cards__info shows__cards__venue"></p>
           </div>
           <div class="shows__cards__blocks">
             <p class="shows__cards__details">LOCATION</p>
-            <p class="shows__cards__info">San Francisco, CA</p>
+            <p class="shows__cards__info shows__cards__location"></p>
           </div>
           <div class="shows__cards__submit">
-            <button class="shows__cards__submit__button"><span>BUY TICKETS</span></button>
+            <button class="shows__cards__submit__button"><span></span></button>
           </div>
         </section>
         <section class="shows__cards">
           <div class="shows__cards__blocks">
             <p class="shows__cards__details shows__cards__details--hidden">DATE</p>
-            <p class="shows__cards__info shows__cards__info--bold">Tue Sept 17 2024</p>
+            <p class="shows__cards__info shows__cards__info--bold"></p>
           </div>
           <div class="shows__cards__blocks">
             <p class="shows__cards__details shows__cards__details--hidden">VENUE</p>
-            <p class="shows__cards__info">Pier 3 East</p>
+            <p class="shows__cards__info shows__cards__venue"></p>
           </div>
           <div class="shows__cards__blocks">
             <p class="shows__cards__details shows__cards__details--hidden">LOCATION</p>
-            <p class="shows__cards__info">San Francisco, CA</p>
+            <p class="shows__cards__info shows__cards__location"></p>
           </div>
           <div class="shows__cards__submit">
-            <button class="shows__cards__submit__button"><span>BUY TICKETS</span></button>
+            <button class="shows__cards__submit__button"><span></span></button>
+          </div>
+        </section>
+
+        <section class="shows__cards">
+          <p class="shows__cards__details shows__cards__details--hidden">DATE</p>
+          <p class="shows__cards__info shows__cards__info--bold"></p>
+          <p class="shows__cards__details shows__cards__details--hidden">VENUE</p>
+          <p class="shows__cards__info shows__cards__venue"></p>
+          <p class="shows__cards__details shows__cards__details--hidden">LOCATION</p>
+          <p class="shows__cards__info shows__cards__location"></p>
+          <div class="shows__cards__submit">
+            <button class="shows__cards__submit__button"><span></span></button>
           </div>
         </section>
         <section class="shows__cards">
           <p class="shows__cards__details shows__cards__details--hidden">DATE</p>
-          <p class="shows__cards__info shows__cards__info--bold">Sat Oct 12 2024</p>
+          <p class="shows__cards__info shows__cards__info--bold"></p>
           <p class="shows__cards__details shows__cards__details--hidden">VENUE</p>
-          <p class="shows__cards__info">View Lounge</p>
+          <p class="shows__cards__info shows__cards__venue"></p>
           <p class="shows__cards__details shows__cards__details--hidden">LOCATION</p>
-          <p class="shows__cards__info">San Francisco, CA</p>
+          <p class="shows__cards__info shows__cards__location"></p>
           <div class="shows__cards__submit">
-            <button class="shows__cards__submit__button"><span>BUY TICKETS</span></button>
+            <button class="shows__cards__submit__button"><span></span></button>
           </div>
         </section>
         <section class="shows__cards">
           <p class="shows__cards__details shows__cards__details--hidden">DATE</p>
-          <p class="shows__cards__info shows__cards__info--bold">Sat Nov 16 2024</p>
+          <p class="shows__cards__info shows__cards__info--bold"></p>
           <p class="shows__cards__details shows__cards__details--hidden">VENUE</p>
-          <p class="shows__cards__info">Hyatt Agency</p>
+          <p class="shows__cards__info shows__cards__venue"></p>
           <p class="shows__cards__details shows__cards__details--hidden">LOCATION</p>
-          <p class="shows__cards__info">San Francisco, CA</p>
+          <p class="shows__cards__info shows__cards__location"></p>
           <div class="shows__cards__submit">
-            <button class="shows__cards__submit__button"><span>BUY TICKETS</span></button>
+            <button class="shows__cards__submit__button"><span></span></button>
           </div>
         </section>
         <section class="shows__cards">
           <p class="shows__cards__details shows__cards__details--hidden">DATE</p>
-          <p class="shows__cards__info shows__cards__info--bold">Fri Nov 29 2024</p>
+          <p class="shows__cards__info shows__cards__info--bold"></p>
           <p class="shows__cards__details shows__cards__details--hidden">VENUE</p>
-          <p class="shows__cards__info">Moscow Center</p>
+          <p class="shows__cards__info shows__cards__venue"></p>
           <p class="shows__cards__details shows__cards__details--hidden">LOCATION</p>
-          <p class="shows__cards__info">San Francisco, CA</p>
+          <p class="shows__cards__info shows__cards__location"></p>
           <div class="shows__cards__submit">
-            <button class="shows__cards__submit__button"><span>BUY TICKETS</span></button>
-          </div>
-        </section>
-        <section class="shows__cards">
-          <p class="shows__cards__details shows__cards__details--hidden">DATE</p>
-          <p class="shows__cards__info shows__cards__info--bold">Wed Dec 18 2024</p>
-          <p class="shows__cards__details shows__cards__details--hidden">VENUE</p>
-          <p class="shows__cards__info">Press Club</p>
-          <p class="shows__cards__details shows__cards__details--hidden">LOCATION</p>
-          <p class="shows__cards__info">San Francisco, CA</p>
-          <div class="shows__cards__submit">
-            <button class="shows__cards__submit__button"><span>BUY TICKETS</span></button>
+            <button class="shows__cards__submit__button"><span></span></button>
           </div>
         </section>
       </div>
