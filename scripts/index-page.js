@@ -1,23 +1,40 @@
-const submissions = [
-  {
-    name: "Victor Pinto",
-    date: "11/02/2023",
-    text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
-  {
-    name: "Christina Cabrera",
-    date: "10/28/2023",
-    text: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-  {
-    name: "Isaac Tadesse",
-    date: "10/20/2023",
-    text: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-  },
-];
+const apiKey = 'c62b0fd4-eb02-460b-865a-8c24013d6a2e'
+//Create instances for each type of data
+
+const api = new BandSiteApi(apiKey)
+
+//Get COMMENTS data (name and comments)
+async function getComments() {
+  let commentData = await api.getComments();
+  console.log(commentData);
+  renderComments(commentData)
+}
+
+getComments();
 
 
-renderComments(submissions);
+
+
+// const submissions = [
+//   {
+//     name: "Victor Pinto",
+//     date: "11/02/2023",
+//     text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+//   },
+//   {
+//     name: "Christina Cabrera",
+//     date: "10/28/2023",
+//     text: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
+//   },
+//   {
+//     name: "Isaac Tadesse",
+//     date: "10/20/2023",
+//     text: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
+//   },
+// ];
+
+
+
 const form = document.getElementById("comments");
 form.addEventListener("submit", handleComment);
 
@@ -39,7 +56,6 @@ function handleComment(e) {
     cError.style.borderColor = "#D22D2D";
     cError.style.borderWidth = "1px";
     return;
-
   }
 
   //COMMENT DATE WITH '0' ADDED
@@ -62,17 +78,12 @@ function handleComment(e) {
 
 
   renderComments(submissions);
-  adjustContainerHeight();
 
   e.target.reset();
 }
 
-function adjustContainerHeight() {
-  const commentsContainer = document.getElementById("posted");
-  const containerHeight = commentsContainer.scrollHeight;
-  commentsContainer.style.height = containerHeight + "px";
-}
 
+//change
 function renderComments(comments) {
 
   const commentsList = document.getElementById("posted");
@@ -103,12 +114,21 @@ function renderComments(comments) {
 
     const itemDate = document.createElement("p");
     itemDate.classList.add("comment-date");
-    itemDate.innerText = `${comm.date}`;
+
+    const today = new Date(comm.timestamp);
+    let d = today.getDate();
+    let m = today.getMonth() + 1;
+    const y = today.getFullYear();
+    d = String(today.getDate()).padStart(2, "0");
+    m = String(today.getMonth() + 1).padStart(2, "0");
+    const date = `${d}/${m}/${y}`;
+    itemDate.innerText = date;
+
     itemInput.append(itemDate);
 
     const itemText = document.createElement("p");
     itemText.classList.add("comment-info__text");
-    itemText.innerText = `${comm.text}`;
+    itemText.innerText = `${comm.comment}`;
 
     const commentInfo = document.createElement("div");
     commentInfo.classList.add("comment-info");
@@ -129,3 +149,5 @@ text(".input__name-label", "NAME");
 text(".input__comment-label", "COMMENT");
 text(".comments-header", "Join the Conversation");
 text(".input__button", "COMMENT");
+
+

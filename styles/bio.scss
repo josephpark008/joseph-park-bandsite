@@ -189,8 +189,7 @@ body {
 // COMMENT SECTION
 
 .comments {
-  //set rem height maintain structure when window height changes and adjust for new comments
-  height: 18.125rem;
+margin:5px;
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -269,7 +268,8 @@ body {
 }
 
 #posted {
-  height: 25rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .comment-box {
@@ -334,6 +334,7 @@ body {
   background-color: #323232;
   color: white;
   padding: $padding;
+  margin-top: 5px;
 
   &__body {
 
@@ -566,7 +567,6 @@ body {
   .comments {
     padding: 0 50px 10px 50px;
     justify-content: center;
-    height: 40%;
   }
 
   .input {
@@ -591,7 +591,7 @@ body {
     justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
-    height: 430px;
+    margin-bottom: 20px;
   }
 
   .comment-box {
