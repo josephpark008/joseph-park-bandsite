@@ -7,6 +7,10 @@
   <title>Band Site</title>
   <link rel="stylesheet" href="../styles/shows.css">
   <link rel="stylesheet" href="../styles/shows.scss">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
+    integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="../scripts/band-site-api.js"></script>
   <script defer src="../scripts/build-shows-page.js"></script>
 </head>
 
@@ -45,92 +49,8 @@
       </div>
     </div>
 
-    <!-- CODED EVERYTHING IN JS BUT HAD TROUBLE WITH 'DETAILS' SO I KEPT HTML FOR NOW -->
-    <section class="shows">
-      <h1 class="shows__header"></h1>
-      <div class="shows__block">
-        <section class="shows__cards">
-          <div class="shows__cards__blocks">
-            <p class="shows__cards__details">DATE</p>
-            <p class="shows__cards__info shows__cards__info--bold"></p>
-          </div>
-          <div class="shows__cards__blocks">
-            <p class="shows__cards__details">VENUE</p>
-            <p class="shows__cards__info shows__cards__venue"></p>
-          </div>
-          <div class="shows__cards__blocks">
-            <p class="shows__cards__details">LOCATION</p>
-            <p class="shows__cards__info shows__cards__location"></p>
-          </div>
-          <div class="shows__cards__submit">
-            <button class="shows__cards__submit__button"><span></span></button>
-          </div>
-        </section>
-        <section class="shows__cards">
-          <div class="shows__cards__blocks">
-            <p class="shows__cards__details shows__cards__details--hidden">DATE</p>
-            <p class="shows__cards__info shows__cards__info--bold"></p>
-          </div>
-          <div class="shows__cards__blocks">
-            <p class="shows__cards__details shows__cards__details--hidden">VENUE</p>
-            <p class="shows__cards__info shows__cards__venue"></p>
-          </div>
-          <div class="shows__cards__blocks">
-            <p class="shows__cards__details shows__cards__details--hidden">LOCATION</p>
-            <p class="shows__cards__info shows__cards__location"></p>
-          </div>
-          <div class="shows__cards__submit">
-            <button class="shows__cards__submit__button"><span></span></button>
-          </div>
-        </section>
-
-        <section class="shows__cards">
-          <p class="shows__cards__details shows__cards__details--hidden">DATE</p>
-          <p class="shows__cards__info shows__cards__info--bold"></p>
-          <p class="shows__cards__details shows__cards__details--hidden">VENUE</p>
-          <p class="shows__cards__info shows__cards__venue"></p>
-          <p class="shows__cards__details shows__cards__details--hidden">LOCATION</p>
-          <p class="shows__cards__info shows__cards__location"></p>
-          <div class="shows__cards__submit">
-            <button class="shows__cards__submit__button"><span></span></button>
-          </div>
-        </section>
-        <section class="shows__cards">
-          <p class="shows__cards__details shows__cards__details--hidden">DATE</p>
-          <p class="shows__cards__info shows__cards__info--bold"></p>
-          <p class="shows__cards__details shows__cards__details--hidden">VENUE</p>
-          <p class="shows__cards__info shows__cards__venue"></p>
-          <p class="shows__cards__details shows__cards__details--hidden">LOCATION</p>
-          <p class="shows__cards__info shows__cards__location"></p>
-          <div class="shows__cards__submit">
-            <button class="shows__cards__submit__button"><span></span></button>
-          </div>
-        </section>
-        <section class="shows__cards">
-          <p class="shows__cards__details shows__cards__details--hidden">DATE</p>
-          <p class="shows__cards__info shows__cards__info--bold"></p>
-          <p class="shows__cards__details shows__cards__details--hidden">VENUE</p>
-          <p class="shows__cards__info shows__cards__venue"></p>
-          <p class="shows__cards__details shows__cards__details--hidden">LOCATION</p>
-          <p class="shows__cards__info shows__cards__location"></p>
-          <div class="shows__cards__submit">
-            <button class="shows__cards__submit__button"><span></span></button>
-          </div>
-        </section>
-        <section class="shows__cards">
-          <p class="shows__cards__details shows__cards__details--hidden">DATE</p>
-          <p class="shows__cards__info shows__cards__info--bold"></p>
-          <p class="shows__cards__details shows__cards__details--hidden">VENUE</p>
-          <p class="shows__cards__info shows__cards__venue"></p>
-          <p class="shows__cards__details shows__cards__details--hidden">LOCATION</p>
-          <p class="shows__cards__info shows__cards__location"></p>
-          <div class="shows__cards__submit">
-            <button class="shows__cards__submit__button"><span></span></button>
-          </div>
-        </section>
-      </div>
-
-    </section>
+<div id="shows-section">
+</div>
     <footer>
 
 

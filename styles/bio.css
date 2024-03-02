@@ -169,7 +169,7 @@ body {
 }
 
 .comments {
-  height: 18.125rem;
+  margin: 5px;
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -241,7 +241,8 @@ body {
 }
 
 #posted {
-  height: 25rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .comment-box {
@@ -297,6 +298,7 @@ body {
   background-color: #323232;
   color: white;
   padding: 16px;
+  margin-top: 5px;
 }
 .footer__body__block {
   margin-top: 0.625rem;
@@ -471,7 +473,6 @@ body {
   .comments {
     padding: 0 50px 10px 50px;
     justify-content: center;
-    height: 40%;
   }
   .input {
     display: flex;
@@ -491,7 +492,7 @@ body {
     justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
-    height: 430px;
+    margin-bottom: 20px;
   }
   .comment-box {
     width: 77%;
