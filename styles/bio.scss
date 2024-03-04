@@ -1,11 +1,11 @@
-@use './partials/variables' as *;
-@use './partials/mixins' as *;
-@use './partials/typography' as *;
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+@use "./partials/typography" as *;
 
 /* fonts mobile */
 body {
   margin: 0;
-  font-family: 'Avenir';
+  font-family: "Avenir", sans-serif;
 }
 
 .nav-bar__list__item,
@@ -20,6 +20,11 @@ body {
   @include p-s-header-font-mob;
 }
 
+.about-info__header,
+.photo-gallery__header {
+  color: $bandsite-black;
+}
+
 .about-info__paragraphs__p1,
 .about-info__paragraphs__p2,
 .footer__body__block__s-header,
@@ -30,11 +35,6 @@ body {
   @include b-f-font-mob;
 }
 
-
-
-
-
-
 /* navigation bar mobile */
 .nav-bar nav,
 .nav-bar,
@@ -43,8 +43,8 @@ body {
 }
 
 .nav-bar {
-  background-color: #323232;
-  color: #AFAFAF;
+  background-color: $bandsite-black;
+  color: $silver;
   display: flex;
   flex-wrap: wrap;
 
@@ -69,23 +69,22 @@ body {
       text-align: center;
       padding-bottom: 0.625rem;
       text-decoration: none;
-      color: #AFAFAF;
+      color: $silver;
       font-weight: 300;
 
       &--selected {
-        border-bottom: 3px solid white;
-        color: white;
+        border-bottom: 3px solid $white;
+        color: $white;
         font-weight: 600;
       }
 
       &:hover {
-        border-bottom: 3px solid white;
-        color: white;
+        border-bottom: 3px solid $white;
+        color: $white;
       }
     }
   }
 }
-
 
 // hero section mobile
 
@@ -102,7 +101,7 @@ body {
   }
 
   &__text {
-    color: white;
+    color: $white;
     left: $padding;
     top: 42%;
     margin: 0px;
@@ -117,7 +116,6 @@ body {
     align-items: center;
   }
 }
-
 
 // about the musicians section mobile
 .about-info {
@@ -149,7 +147,6 @@ body {
     width: 96%;
   }
 
-
   &__header {
     width: $full-width-height;
     margin: 0;
@@ -168,7 +165,7 @@ body {
 // photo gallery mobile
 
 .photo-gallery {
-  background-color: #FAFAFA;
+  background-color: $alabaster;
   padding: $padding;
   padding-bottom: 0;
 
@@ -182,14 +179,13 @@ body {
   &__photos__item {
     width: $full-width-height;
     margin-bottom: 0.625rem;
-
   }
 }
 
 // COMMENT SECTION
 
 .comments {
-margin:5px;
+  margin: 5px;
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -213,7 +209,6 @@ margin:5px;
   }
 }
 
-
 .input {
   width: 80%;
 
@@ -228,31 +223,31 @@ margin:5px;
     resize: none;
 
     &__active {
-      border: #323232;
+      border: $bandsite-black;
     }
 
     &::placeholder {
       font-size: 0.75rem;
-      color: black;
-      font-family: 'Avenir';
+      color: $bandsite-black;
+      font-family: "Avenir";
     }
   }
 
   &__name-label,
   &__comment-label {
-    color: #AFAFAF;
+    color: $silver;
     @include b-f-font-mob;
     font-size: 0.625rem;
     width: 100%;
     margin: 0;
     margin-top: 1.25rem;
-  //if converted to rem, weird distrortion occurs (problem seeking)
+    //if converted to rem, weird distrortion occurs (problem seeking)
     margin-bottom: 4px;
   }
 
   &__button {
-    background-color: #323232;
-    color: white;
+    background-color: $bandsite-black;
+    color: $white;
     border: 5px;
     width: 14.375rem;
     border-radius: 4px;
@@ -261,10 +256,9 @@ margin:5px;
     font-size: 0.938rem;
 
     &:hover {
-      background-color: #000000;
+      background-color: $bandsite-darkblack;
     }
   }
-
 }
 
 #posted {
@@ -278,7 +272,7 @@ margin:5px;
   padding-top: 1.25rem;
   display: flex;
   flex-wrap: wrap;
-  border-top: solid #E1E1E1 1px;
+  border-top: solid $mercury 1px;
 
   &__avatar {
     background-color: rgb(225, 225, 225);
@@ -316,28 +310,23 @@ margin:5px;
 }
 
 .comment-date {
-  color: #AFAFAF;
+  color: $silver;
 }
 
 .last-comment {
-  border-bottom: solid #afafaf 1px;
+  border-bottom: solid $silver 1px;
 }
-
-
-
-
 
 // footer section mobile
 
 //footer
 .footer {
-  background-color: #323232;
-  color: white;
+  background-color: $bandsite-black;
+  color: $white;
   padding: $padding;
   margin-top: 5px;
 
   &__body {
-
     &__block {
       margin-top: 0.625rem;
       margin-bottom: 0.625rem;
@@ -391,12 +380,9 @@ margin:5px;
   }
 }
 
-
-
 // TABLET
 
 @media screen and (min-width: 768px) {
-
   //Fonts tablet and desktop
 
   .nav-bar__list__item {
@@ -429,8 +415,6 @@ margin:5px;
     @include b-font-d-t;
   }
 
-
-
   // navigation bar
   nav {
     display: flex;
@@ -440,7 +424,6 @@ margin:5px;
   }
 
   .nav-bar {
-
     &__band-icon {
       width: 20%;
       margin-right: 1.563rem;
@@ -459,7 +442,6 @@ margin:5px;
     }
   }
 
-
   // hero section
   .hero {
     //used px because % cannot is capped and cannot create desired height
@@ -471,13 +453,12 @@ margin:5px;
     }
   }
 
-
   // about musicians
   .about-info {
     &__body {
       padding-left: 5.313rem;
       padding-right: 5.313rem;
-      padding-bottom: 1.25rem
+      padding-bottom: 1.25rem;
     }
 
     &__band {
@@ -528,7 +509,6 @@ margin:5px;
       margin-bottom: 1.25rem;
     }
   }
-
 
   // photo gallery section
   .photo-gallery {
@@ -665,7 +645,6 @@ margin:5px;
           font-size: 14px;
         }
 
-
         &__info p {
           margin-top: 0.313rem;
           margin-bottom: 0.313rem;
@@ -706,14 +685,10 @@ margin:5px;
       }
     }
   }
-
 }
-
-
 
 // DESKTOP
 @media screen and (min-width: 1280px) {
-
   // navigation bar
   .nav-bar {
     height: 80px;
@@ -741,8 +716,7 @@ margin:5px;
     height: 80%;
   }
 
-
-  // hero section  
+  // hero section
   .hero {
     //used px because % cannot is capped and cannot create desired height
     height: 620px;
@@ -808,7 +782,6 @@ margin:5px;
           border: solid black 10px;
         }
       }
-
     }
 
     &__header {
@@ -817,7 +790,6 @@ margin:5px;
       margin-top: 1.875rem;
       margin-bottom: 1.875rem;
     }
-
   }
 
   // COMMENTS SECTION
@@ -837,8 +809,6 @@ margin:5px;
     width: 38%;
   }
 
-
-
   // footer section
   .footer {
     padding-left: 120px;
@@ -852,7 +822,6 @@ margin:5px;
       }
 
       &__block {
-
         &__copy {
           font-size: 14px;
         }
@@ -872,6 +841,5 @@ margin:5px;
         }
       }
     }
-
   }
 }

@@ -1,122 +1,125 @@
 //YOU NEED TO CREATE HTML ELEMENTS IN FUNCTION
-//NEED TO FIX BEM 
+//NEED TO FIX BEM
 //NEED TO CHENAGE CLASS NAMES FOR __BLOCK AND __SECTION
 
-const apiKey = 'c62b0fd4-eb02-460b-865a-8c24013d6a2e'
+const apiKey = "c62b0fd4-eb02-460b-865a-8c24013d6a2e";
 //Create instances for each type of data
 
-const api = new BandSiteApi(apiKey)
+const api = new BandSiteApi(apiKey);
 
 //Get SHOWS data (date, location and place)
 async function getShows() {
   // Fetch show data from the API
   const showData = await api.getShows();
-  // console.log(showData)s
+  console.log(showData);
   renderShows(showData);
 }
 
-getShows()
+getShows();
 
 function renderShows(shows) {
-
-
-  // Create section.shows
-  const showsBody = document.createElement('section');
-  showsBody.classList.add('shows');
+  //create shows BODY
   const showsSection = document.getElementById("shows-section");
-  showsSection.append(showsBody);
 
+  //create shows HEADER
+  const header = document.createElement("h1");
+  header.classList.add("shows-header");
+  header.innerText = "Shows";
+  showsSection.appendChild(header);
 
-  // Create h1.shows__header
-  const header = document.createElement('h1');
-  header.classList.add('shows__header');
-  showsBody.appendChild(header);
+  //create shows LABELS for tablet/desktop
+  const labelsBlock = document.createElement('div');
+  labelsBlock.classList.add('shows-block');
+  showsSection.appendChild(labelsBlock);
 
-  // Create div.shows__block
-  const showsBlock = document.createElement('div');
-  showsBlock.classList.add('shows__block');
-  showsBody.appendChild(showsBlock);
+  const labelsDate = document.createElement('p');
+  labelsDate.classList.add('shows-block__date');
+  labelsDate.innerText = 'DATE';
+  labelsBlock.appendChild(labelsDate);
 
-  shows.forEach((showItem) => {
+  const labelsVenue = document.createElement('p');
+  labelsVenue.classList.add('shows-block__venue');
+  labelsVenue.innerText = 'VENUE';
+  labelsBlock.appendChild(labelsVenue);
 
-    // Create 6 sections.shows__cards
+  const labelsLocation = document.createElement('p');
+  labelsLocation.classList.add('shows-block__location');
+  labelsLocation.innerText = 'LOCATION';
+  labelsBlock.appendChild(labelsLocation);
 
-    // Create section.shows__cards
-    const cardSection = document.createElement('section');
-    cardSection.classList.add('shows__cards');
-    showsBlock.appendChild(cardSection);
+  shows.forEach((show) => {
+    const showCard = document.createElement("div");
+    showCard.classList.add("show-cards");
+    showsSection.appendChild(showCard);
 
-    // Create div.shows__cards__blocks
-    const cardBlock = document.createElement('div');
-    cardBlock.classList.add('shows__cards__blocks');
-    cardSection.appendChild(cardBlock);
+    const labels = ["DATE", "VENUE", "LOCATION"];
 
+    //DATE CONVERSION
+    function getMonthName(month) {
+      const months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "April",
+        "May",
+        "June",
+        "July",
+        "Aug",
+        "Sept",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      return months[month]; // No need to adjust month index
+    }
 
-    //date detail
-    const dateLabel = document.createElement('p');
-    dateLabel.classList.add('shows__cards__details');
-    dateLabel.innerText = 'DATE'
-    console.log(showItem.date)
-    cardBlock.appendChild(dateLabel);
+    function getDayName(day) {
+      const days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+      return days[day];
+    }
 
-    // Create p.shows__cards__info.shows__cards__info--bold
-    const boldInfoParagraph = document.createElement('p');
-    boldInfoParagraph.classList.add('shows__cards__info', 'shows__cards__info--bold1');
-    boldInfoParagraph.innerText = showItem.date
-    cardBlock.appendChild(boldInfoParagraph);
+    function convertDateToWords(date) {
+      const date1 = new Date(date);
+      const dayWords = getDayName(date1.getDay()); // Use getDay instead of getDate
+      let day = date1.getDate();
+      day = String(date1.getDate()).padStart(2, "0");
+      const month = getMonthName(date1.getMonth());
+      const year = date1.getFullYear();
+      return `${dayWords} ${month} ${day} ${year}`; // Return the formatted date as a string
+      console.log(`${dayWords} ${month} ${day} ${year}`);
+    }
 
-    //place detail
-    const placeLabel = document.createElement('p');
-    placeLabel.classList.add('shows__cards__details');
-    placeLabel.innerText = 'VENUE'
-    cardBlock.appendChild(placeLabel);
+    const inputs = [convertDateToWords(show.date), show.place, show.location];
 
-    // Create PLACE INPUT
-    const placeInfoParagraph = document.createElement('p');
-    placeInfoParagraph.classList.add('shows__cards__info', 'shows__cards__place');
-    placeInfoParagraph.innerText = `${showItem.place}`
-    cardSection.appendChild(placeInfoParagraph);
+    for (let i = 0; i < 3; i++) {
+      const showPair = document.createElement("div");
+      showPair.classList.add("show-pairs");
+      showCard.appendChild(showPair);
 
-    //location detail
-    const locationLabel = document.createElement('p');
-    locationLabel.classList.add('shows__cards__details');
-    locationLabel.innerText = 'LOCATION'
-    cardBlock.appendChild(locationLabel);
-    
-    // CREATE LOCATION INPUT
-    const venueInfoParagraph = document.createElement('p');
-    venueInfoParagraph.classList.add('shows__cards__info', 'shows__cards__location');
-    venueInfoParagraph.innerText = `${showItem.location}`
-    cardSection.appendChild(venueInfoParagraph);
+      const label = document.createElement("p");
+      label.classList.add(`show-pairs__${labels[i].toLowerCase()}-label`);
+      label.innerText = labels[i];
+      showPair.appendChild(label);
 
+      const input = document.createElement("p");
+      input.classList.add(`show-pairs__${labels[i].toLowerCase()}-input`);
+      
+      if (i === 0) {
+        input.classList.add("show-pairs__date-input--bold");
+      }
+      input.innerText = inputs[i];
+      showPair.appendChild(input);
+    }
 
-    // // Create p.shows__cards__info.shows__cards__location
-    // const locationInfoParagraph = document.createElement('p');
-    // locationInfoParagraph.classList.add('shows__cards__info', 'shows__cards__location');
-    // cardSection.appendChild(locationInfoParagraph);
+    const buyTicketsButton = document.createElement("button");
+    buyTicketsButton.classList.add("submit-button");
+    showCard.appendChild(buyTicketsButton);
 
-    // Create div.shows__cards__submit
-    const submitDiv = document.createElement('div');
-    submitDiv.classList.add('shows__cards__submit');
-    cardSection.appendChild(submitDiv);
-
-    // Create button.shows__cards__submit__button
-    const submitButton = document.createElement('button');
-    submitButton.classList.add('shows__cards__submit__button');
-    submitDiv.appendChild(submitButton);
-
-    // Create span inside button
-    const span = document.createElement('span');
-    submitButton.appendChild(span);
-  }
-
-    // Append the showsSection to the document body
-
-  )
+    const buttonText = document.createElement("p");
+    buttonText.classList.add("submit-button__text");
+    buttonText.innerText = "BUY TICKETS";
+    buyTicketsButton.appendChild(buttonText);
+  });
 }
-
-
-
-//BREAK
 
 
