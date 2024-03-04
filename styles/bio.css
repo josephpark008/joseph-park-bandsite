@@ -21,17 +21,16 @@ body {
 
 .nav-bar__list__item,
 .about-info__band {
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 .hero__text,
 .about-info__header,
 .photo-gallery__header,
 .footer__body__block__header {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .about-info__header,
@@ -46,8 +45,8 @@ body {
 .footer__body__block__copy,
 .about-info__quote,
 .about-info__by {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
 }
 
 /* navigation bar mobile */
@@ -98,7 +97,7 @@ body {
 
 .hero {
   background-image: url(../assets/Images/hero-bio.jpg);
-  height: 200px;
+  height: 12.5rem;
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -110,7 +109,7 @@ body {
   color: #FFFFFF;
   left: 16px;
   top: 42%;
-  margin: 0px;
+  margin: 0;
   padding-left: 0.938rem;
   font-weight: 600;
 }
@@ -152,8 +151,8 @@ body {
   font-weight: 600;
 }
 .about-info__image {
-  width: 289px;
-  height: 170px;
+  width: 18.063rem;
+  height: 10.625rem;
   padding-bottom: 16px;
 }
 
@@ -174,7 +173,7 @@ body {
 }
 
 .comments {
-  margin: 5px;
+  margin: 0.313;
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -183,8 +182,8 @@ body {
   background-image: url(../assets/Images/Mohan-muruge.jpg);
   background-repeat: no-repeat;
   background-size: 150%;
-  height: 36px;
-  width: 36px;
+  height: 2.25rem;
+  width: 2.25rem;
   border-radius: 100px;
   margin-right: 0.938rem;
   margin-top: 2.188rem;
@@ -204,7 +203,7 @@ body {
   border-radius: 4px;
   background-color: rgba(175, 175, 175, 0.1);
   border: solid rgba(175, 175, 175, 0.2) 1px;
-  padding: 7px;
+  padding: 0.438rem;
   box-sizing: border-box;
   resize: none;
 }
@@ -223,13 +222,13 @@ body {
 }
 .input__name-label, .input__comment-label {
   color: #AFAFAF;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
   font-size: 0.625rem;
   width: 100%;
   margin: 0;
   margin-top: 1.25rem;
-  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
 }
 .input__button {
   background-color: #323232;
@@ -246,14 +245,15 @@ body {
 }
 
 #posted {
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 0.625rem;
+  margin-top: 0.625rem;
 }
 
 .comment-box {
   margin-right: 1.25rem;
   margin-left: 1.25rem;
   padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
   display: flex;
   flex-wrap: wrap;
   border-top: solid #E1E1E1 1px;
@@ -264,7 +264,7 @@ body {
   background-size: 150%;
   height: 2.25rem;
   width: 2.25rem;
-  border-radius: 100px;
+  border-radius: 6.25rem;
   margin: 0;
   margin-right: 1.063rem;
 }
@@ -283,11 +283,17 @@ body {
 .comment-info__text {
   margin-top: 0.375rem;
 }
+.comment-info__delete-button {
+  background-color: #323232;
+  color: #FFFFFF;
+  border-radius: 3px;
+  font-size: 0.625rem;
+}
 
 .comment-name {
   margin: 0;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
   font-weight: 600;
 }
 
@@ -303,16 +309,15 @@ body {
   background-color: #323232;
   color: #FFFFFF;
   padding: 16px;
-  margin-top: 5px;
+  margin-top: 0.313rem;
 }
 .footer__body__block {
-  margin-top: 0.625rem;
-  margin-bottom: 0.625rem;
+  margin: 0.625rem 0 0.625rem 0;
 }
 .footer__body__block__header {
   font-weight: 600;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 0.938rem;
 }
 .footer__body__block__icons {
   width: 41%;
@@ -335,8 +340,8 @@ body {
   margin: 0;
 }
 .footer__body__block__info--bold {
-  margin-top: 15px;
-  margin-bottom: 25px;
+  margin-top: 0.938rem;
+  margin-bottom: 1.563rem;
 }
 .footer__body__block__copy {
   margin-top: 0.925rem;
@@ -348,34 +353,34 @@ body {
 
 @media screen and (min-width: 768px) {
   .nav-bar__list__item {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
   .hero__text {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
   }
   .about-info__header,
   .photo-gallery__header,
   .footer__body__block__header {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .footer__body__block__s-header,
   .footer {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
   .about-info__quote,
   .about-info__band {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .about-info__by,
   .about-info__paragraphs__p1,
   .about-info__paragraphs__p2 {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   nav {
     display: flex;
@@ -398,8 +403,8 @@ body {
     padding-top: 1.25rem;
   }
   .hero {
-    height: 450px;
-    background-position: center -60px;
+    height: 28.125rem;
+    background-position: center -3.75rem;
   }
   .hero__text {
     padding-left: 2.5rem;
@@ -444,8 +449,8 @@ body {
   }
   .about-info__image {
     width: 100%;
-    height: 320px;
-    width: 560px;
+    height: 20rem;
+    width: 35rem;
     margin-bottom: 1.25rem;
   }
   .photo-gallery {
@@ -471,12 +476,12 @@ body {
     width: 28%;
   }
   .photo-gallery__photos__item:hover {
-    width: 400px;
-    height: 300px;
+    width: 25rem;
+    height: 18.75rem;
     border: black solid 5px;
   }
   .comments {
-    padding: 0 50px 10px 50px;
+    padding: 0 3.125rem 0.625rem 3.125rem;
     justify-content: center;
   }
   .input {
@@ -488,8 +493,8 @@ body {
     width: 100%;
   }
   .input__button {
-    width: 170px;
-    margin-top: 30px;
+    width: 10.625rem;
+    margin-top: 1.875rem;
   }
   #posted {
     display: flex;
@@ -497,7 +502,7 @@ body {
     justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
   .comment-box {
     width: 77%;
@@ -508,13 +513,13 @@ body {
   }
   .comment-info__text {
     width: 100%;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   .comments-header {
-    font-size: 36px;
-    line-height: 44px;
-    margin-top: 30px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-top: 1.875rem;
   }
   .footer {
     padding: 3.125rem;
@@ -529,7 +534,7 @@ body {
   .footer__body-top {
     width: 100%;
     display: flex;
-    gap: 30px;
+    gap: 1.875re m;
     flex-wrap: wrap;
   }
   .footer__body__block1 {
@@ -538,15 +543,16 @@ body {
   .footer__body__block {
     margin-top: 0.625rem;
     margin-bottom: 0.625rem;
+    margin-left: 1.5rem;
     max-width: 100%;
   }
   .footer__body__block--large {
     display: flex;
     flex-wrap: wrap;
-    height: 50px;
+    height: 3.125rem;
     margin: 0;
     align-content: end;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
   }
   .footer__body__block__icons {
     width: 15%;
@@ -559,7 +565,7 @@ body {
   .footer__body__block__s-header, .footer__body__block__info {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .footer__body__block__info p {
     margin-top: 0.313rem;
@@ -569,10 +575,10 @@ body {
   .footer__body__block__header {
     width: 31%;
     margin: 0;
-    font-size: 36px;
-    line-height: 44px;
-    margin-right: 20px;
-    height: 38px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-right: 1.25rem;
+    height: 2.375rem;
   }
   .footer__body__block__copy {
     width: 100%;
@@ -591,14 +597,14 @@ body {
     flex-wrap: wrap;
     width: 100%;
     margin-top: 0.313rem;
-    height: 40px;
+    height: 2.5rem;
     align-items: center;
     margin-bottom: 0.938rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .nav-bar {
-    height: 80px;
+    height: 5rem;
   }
   .nav-bar__list {
     width: 16%;
@@ -619,7 +625,7 @@ body {
     height: 80%;
   }
   .hero {
-    height: 620px;
+    height: 38.75rem;
   }
   .hero__text {
     padding-left: 8.125rem;
@@ -646,8 +652,8 @@ body {
   }
   .about-info__image {
     width: 100%;
-    height: 500px;
-    width: 900px;
+    height: 31.25rem;
+    width: 56.25rem;
   }
   .about-info__paragraphs {
     justify-content: space-between;
@@ -656,8 +662,8 @@ body {
     width: 49%;
   }
   .photo-gallery {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
   }
   .photo-gallery__photos {
     width: 100%;
@@ -666,8 +672,8 @@ body {
     width: 27%;
   }
   .photo-gallery__photos__item:hover {
-    width: 500px;
-    height: 300px;
+    width: 31.25rem;
+    height: 18.75;
     border: solid black 10px;
   }
   .photo-gallery__header {
@@ -677,34 +683,37 @@ body {
     margin-bottom: 1.875rem;
   }
   .comments {
-    padding: 0px 120px 0 120px;
+    padding: 0 7.5 0 7.5;
   }
   .input {
     width: 40%;
   }
   .input__button {
-    width: 150px;
+    width: 9.375;
   }
   .comment-box {
     width: 38%;
   }
   .footer {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
   }
   .footer__body {
     width: 78%;
   }
   .footer__body-top {
-    gap: 60px;
+    gap: 3.75rem;
+  }
+  .footer__body__block {
+    margin-left: 0;
   }
   .footer__body__block__copy {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .footer__body__block__header {
     width: 23%;
     margin: 0;
-    margin-right: 18px;
+    margin-right: 1.125rem;
   }
   .footer__body__block__icons {
     width: 11%;

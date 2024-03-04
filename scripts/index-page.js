@@ -21,9 +21,7 @@ async function handleComment(e) {
   e.preventDefault();
 
   const fullName = nameField.value;
-  console.log(fullName);
   const fullText = commentField.value;
-  console.log(fullText);
 
   // Validate text inputW
   if (!fullName.trim()) {
@@ -62,6 +60,8 @@ async function handleComment(e) {
 function renderComments(comments) {
   const commentsList = document.getElementById("posted");
   commentsList.innerHTML = "";
+
+  comments.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
   comments.forEach((comment, index) => {
     const item = document.createElement("div");
@@ -112,6 +112,7 @@ function renderComments(comments) {
     item.append(commentInfo);
 
     const deleteButton = document.createElement("button");
+    deleteButton.classList.add("comment-info__delete-button");
     commentInfo.appendChild(deleteButton);
     deleteButton.innerText = "DELETE";
 

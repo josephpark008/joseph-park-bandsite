@@ -98,12 +98,12 @@ body {
 
 // SHOWS SECTION
 #shows-section {
-  margin-bottom: 20px;
+  margin-bottom: 0.625rem;
 }
 .shows-header {
   @include p-s-header-font-mob;
   font-weight: 600;
-  margin: 30px 0 20px 15px;
+  margin: 1.875rem 0 1.25rem 0.938rem;
 }
 
 .shows-block {
@@ -116,7 +116,7 @@ body {
   flex-wrap: wrap;
   width: 100%;
   border-bottom: 1px solid $bandsite-darkblack;
-  padding: 15px 0 15px 0;
+  padding: 0.938rem 0 0.938rem 0;
 }
 .show-pairs {
   width: 100%;
@@ -130,7 +130,7 @@ body {
     font-size: 0.563rem;
     font-weight: 600;
     margin: 0;
-    padding-left: 15px;
+    padding-left: 0.938rem;
   }
   &__date-input,
   &__venue-input,
@@ -138,7 +138,7 @@ body {
     @include subHeader-font-mob;
     font-size: 0.75rem;
     font-weight: 400;
-    padding-left: 15px;
+    padding-left: 0.938rem;
   }
   &__date-input--bold {
     font-weight: 600;
@@ -152,7 +152,7 @@ body {
   color: $white;
   border: none;
   border-radius: 4px;
-  padding: 8px 0 8px 0;
+  padding: 0.5rem 0 0.5rem 0;
   &__text {
     margin: 0;
     color: $white;
@@ -282,7 +282,7 @@ body {
     background-position: center 45%;
     box-sizing: border-box;
     width: 100vw;
-    height: 440px;
+    height: 27.5rem;
 
     &__filter {
       padding: 2.5rem;
@@ -331,7 +331,7 @@ body {
   .shows-block {
     width: 80%;
     display: flex;
-    margin-right: 200px;
+    margin-right: 12.5rem;
 
     &__date,
     &__location,
@@ -343,17 +343,17 @@ body {
       margin: 0;
     }
     &__location {
-      padding-left: 140px;
+      padding-left: 8.75rem;
     }
 
     &__date {
       padding: 0;
-      padding-left: 76px;
+      padding-left: 4.75rem;
     }
 
     &__venue {
       padding: 0;
-      padding-left: 145px;
+      padding-left: 9.063;
     }
   }
   .show-cards {
@@ -369,11 +369,11 @@ body {
 
   .submit-button {
     width: 22%;
-    margin-left: 30px;
+    margin-left: 1.875;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 7px;
+    padding: 0.438rem;
     &__text {
       height: 100%;
       display: flex;
@@ -525,10 +525,10 @@ body {
   // SHOWS SECTION
   .shows-block {
     &__venue {
-      padding-left: 265px;
+      padding-left: 16.563;
     }
     &__location {
-      padding-left: 255px;
+      padding-left: 15.938rem;
     }
   }
   #shows-section {
@@ -538,20 +538,20 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: end;
-    margin-right: 100px;
+    margin-right: 6.25rem;
   }
   .shows-block {
-    margin: 20px 0 0 0;
+    margin: 1.25rem 0 0 0;
     width: 80%;
 
     &__date {
-      padding-left: 150px;
+      padding-left: 9.375;
     }
     &__venue {
-      padding-left: 235px;
+      padding-left: 14.688rem;
     }
     &__location {
-      padding-left: 135px;
+      padding-left: 8.438rem;
     }
   }
 
@@ -583,12 +583,12 @@ body {
 
     &__venue-input {
       width: 50%;
-      padding-left: 80px;
+      padding-left: 5rem;
     }
 
     &__location-input {
       width: 55%;
-      padding-left: 50px;
+      padding-left: 3.125rem;
     }
   }
   // footer section
