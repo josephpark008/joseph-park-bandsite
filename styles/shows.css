@@ -83,14 +83,14 @@ body {
 }
 .hero__filter__header {
   color: #FFFFFF;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 600;
   width: 80%;
 }
 .hero__filter__text {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
   margin: 0;
   color: #FFFFFF;
   font-weight: 400;
@@ -101,14 +101,14 @@ body {
 }
 
 #shows-section {
-  margin-bottom: 20px;
+  margin-bottom: 0.625rem;
 }
 
 .shows-header {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 600;
-  margin: 30px 0 20px 15px;
+  margin: 1.875rem 0 1.25rem 0.938rem;
 }
 
 .shows-block {
@@ -121,7 +121,7 @@ body {
   flex-wrap: wrap;
   width: 100%;
   border-bottom: 1px solid #000000;
-  padding: 15px 0 15px 0;
+  padding: 0.938rem 0 0.938rem 0;
 }
 
 .show-pairs {
@@ -130,20 +130,19 @@ body {
 }
 .show-pairs__date-label, .show-pairs__venue-label, .show-pairs__location-label {
   color: #AFAFAF;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
   font-size: 0.563rem;
   font-weight: 600;
   margin: 0;
-  padding-left: 15px;
+  padding-left: 0.938rem;
 }
 .show-pairs__date-input, .show-pairs__venue-input, .show-pairs__location-input {
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-size: 0.75rem;
   font-weight: 400;
-  padding-left: 15px;
+  padding-left: 0.938rem;
 }
 .show-pairs__date-input--bold {
   font-weight: 600;
@@ -156,13 +155,13 @@ body {
   color: #FFFFFF;
   border: none;
   border-radius: 4px;
-  padding: 8px 0 8px 0;
+  padding: 0.5rem 0 0.5rem 0;
 }
 .submit-button__text {
   margin: 0;
   color: #FFFFFF;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
 }
 
@@ -211,34 +210,34 @@ body {
 
 @media screen and (min-width: 768px) {
   .nav-bar__list__item {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
   .hero__text {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
   }
   .about-info__header,
   .photo-gallery__header,
   .footer__body__block__header {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .footer__body__block__s-header,
   .footer {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
   .about-info__quote,
   .about-info__band {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .about-info__by,
   .about-info__paragraphs__p1,
   .about-info__paragraphs__p2 {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   nav {
     display: flex;
@@ -264,21 +263,21 @@ body {
     background-position: center 45%;
     box-sizing: border-box;
     width: 100vw;
-    height: 440px;
+    height: 27.5rem;
   }
   .hero__filter {
     padding: 2.5rem;
     padding-bottom: 6.25rem;
   }
   .hero__filter__header {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
     width: 80%;
     margin-top: 0.938rem;
   }
   .hero__filter__text {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 300;
   }
   .hero__filter__sound {
@@ -294,8 +293,8 @@ body {
   .shows-header {
     justify-self: start;
     margin: 3rem 40rem 2rem 5rem;
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     display: flex;
   }
   .show-pairs__date-label, .show-pairs__venue-label, .show-pairs__location-label {
@@ -304,26 +303,26 @@ body {
   .shows-block {
     width: 80%;
     display: flex;
-    margin-right: 200px;
+    margin-right: 12.5rem;
   }
   .shows-block__date, .shows-block__location, .shows-block__venue {
     color: #AFAFAF;
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.813rem;
+    line-height: 1.125rem;
     font-size: 0.563rem;
     font-weight: 600;
     margin: 0;
   }
   .shows-block__location {
-    padding-left: 140px;
+    padding-left: 8.75rem;
   }
   .shows-block__date {
     padding: 0;
-    padding-left: 76px;
+    padding-left: 4.75rem;
   }
   .shows-block__venue {
     padding: 0;
-    padding-left: 145px;
+    padding-left: 9.063;
   }
   .show-cards {
     display: flex;
@@ -336,11 +335,11 @@ body {
   }
   .submit-button {
     width: 22%;
-    margin-left: 30px;
+    margin-left: 1.875;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 7px;
+    padding: 0.438rem;
   }
   .submit-button__text {
     height: 100%;
@@ -384,8 +383,8 @@ body {
   }
   .footer__body__block__s-header, .footer__body__block__info {
     margin: 1.25rem 0 1.25rem 0;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   .footer__body__block__info p {
     margin: 0.313rem 0 0.313rem 0;
@@ -394,8 +393,8 @@ body {
   .footer__body__block__header {
     width: 31%;
     margin: 0;
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     margin-right: 1.25rem;
     height: 2.375rem;
   }
@@ -403,8 +402,8 @@ body {
     width: 100%;
     margin: 0;
     margin-top: 0.938rem;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
   .footer__body__block__bandsite-logo {
     position: absolute;
@@ -466,10 +465,10 @@ body {
     margin-top: 1.25rem;
   }
   .shows-block__venue {
-    padding-left: 265px;
+    padding-left: 16.563;
   }
   .shows-block__location {
-    padding-left: 255px;
+    padding-left: 15.938rem;
   }
   #shows-section {
     padding: 0;
@@ -478,20 +477,20 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: end;
-    margin-right: 100px;
+    margin-right: 6.25rem;
   }
   .shows-block {
-    margin: 20px 0 0 0;
+    margin: 1.25rem 0 0 0;
     width: 80%;
   }
   .shows-block__date {
-    padding-left: 150px;
+    padding-left: 9.375;
   }
   .shows-block__venue {
-    padding-left: 235px;
+    padding-left: 14.688rem;
   }
   .shows-block__location {
-    padding-left: 135px;
+    padding-left: 8.438rem;
   }
   .shows-header {
     height: 100%;
@@ -517,11 +516,11 @@ body {
   }
   .show-pairs__venue-input {
     width: 50%;
-    padding-left: 80px;
+    padding-left: 5rem;
   }
   .show-pairs__location-input {
     width: 55%;
-    padding-left: 50px;
+    padding-left: 3.125rem;
   }
   .footer {
     padding-left: 7.5rem;
@@ -532,8 +531,8 @@ body {
     gap: 4.125rem;
   }
   .footer__body__block__copy {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   .footer__body__block__header {
     width: 23%;

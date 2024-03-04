@@ -91,7 +91,7 @@ body {
 .hero {
   background-image: url(../assets/Images/hero-bio.jpg);
   //used px because % cannot is capped and cannot create desired height
-  height: 200px;
+  height: 12.5rem;
   background-size: $full-width-height;
   background-repeat: no-repeat;
 
@@ -104,7 +104,7 @@ body {
     color: $white;
     left: $padding;
     top: 42%;
-    margin: 0px;
+    margin: 0;
     padding-left: 0.938rem;
     font-weight: 600;
   }
@@ -156,8 +156,8 @@ body {
   }
 
   &__image {
-    width: 289px;
-    height: 170px;
+    width: 18.063rem;
+    height: 10.625rem;
     padding-bottom: $padding;
   }
 }
@@ -185,7 +185,7 @@ body {
 // COMMENT SECTION
 
 .comments {
-  margin: 5px;
+  margin: 0.313;
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -194,8 +194,8 @@ body {
     background-image: url(../assets/Images/Mohan-muruge.jpg);
     background-repeat: no-repeat;
     background-size: 150%;
-    height: 36px;
-    width: 36px;
+    height: 2.25rem;
+    width: 2.25rem;
     border-radius: 100px;
     margin-right: 0.938rem;
     margin-top: 2.188rem;
@@ -218,7 +218,7 @@ body {
     border-radius: 4px;
     background-color: rgba(175, 175, 175, 0.1);
     border: solid rgba(175, 175, 175, 0.2) 1px;
-    padding: 7px;
+    padding: 0.438rem;
     box-sizing: border-box;
     resize: none;
 
@@ -242,7 +242,7 @@ body {
     margin: 0;
     margin-top: 1.25rem;
     //if converted to rem, weird distrortion occurs (problem seeking)
-    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
   }
 
   &__button {
@@ -261,15 +261,17 @@ body {
   }
 }
 
+//posted comments
 #posted {
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 0.625rem;
+  margin-top: 0.625rem;
 }
 
 .comment-box {
   margin-right: 1.25rem;
   margin-left: 1.25rem;
   padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
   display: flex;
   flex-wrap: wrap;
   border-top: solid $mercury 1px;
@@ -280,7 +282,7 @@ body {
     background-size: 150%;
     height: 2.25rem;
     width: 2.25rem;
-    border-radius: 100px;
+    border-radius: 6.25rem;
     margin: 0;
     margin-right: 1.063rem;
   }
@@ -300,6 +302,13 @@ body {
 
   &__text {
     margin-top: 0.375rem;
+  }
+
+  &__delete-button {
+    background-color: $bandsite-black;
+    color: $white;
+    border-radius: 3px;
+    font-size: 0.625rem;
   }
 }
 
@@ -324,17 +333,16 @@ body {
   background-color: $bandsite-black;
   color: $white;
   padding: $padding;
-  margin-top: 5px;
+  margin-top: 0.313rem;
 
   &__body {
     &__block {
-      margin-top: 0.625rem;
-      margin-bottom: 0.625rem;
+      margin: 0.625rem 0 0.625rem 0;
 
       &__header {
         font-weight: 600;
         margin: 0;
-        margin-bottom: 15px;
+        margin-bottom: 0.938rem;
       }
 
       &__icons {
@@ -363,8 +371,8 @@ body {
         margin: 0;
 
         &--bold {
-          margin-top: 15px;
-          margin-bottom: 25px;
+          margin-top: 0.938rem;
+          margin-bottom: 1.563rem;
         }
       }
 
@@ -445,8 +453,8 @@ body {
   // hero section
   .hero {
     //used px because % cannot is capped and cannot create desired height
-    height: 450px;
-    background-position: center -60px;
+    height: 28.125rem;
+    background-position: center -3.75rem;
 
     &__text {
       padding-left: 2.5rem;
@@ -504,8 +512,8 @@ body {
 
     &__image {
       width: $full-width-height;
-      height: 320px;
-      width: 560px;
+      height: 20rem;
+      width: 35rem;
       margin-bottom: 1.25rem;
     }
   }
@@ -535,8 +543,8 @@ body {
         width: 28%;
 
         &:hover {
-          width: 400px;
-          height: 300px;
+          width: 25rem;
+          height: 18.75rem;
           border: black solid 5px;
         }
       }
@@ -545,7 +553,7 @@ body {
 
   // COMMENT SECTION
   .comments {
-    padding: 0 50px 10px 50px;
+    padding: 0 3.125rem 0.625rem 3.125rem;
     justify-content: center;
   }
 
@@ -560,8 +568,8 @@ body {
     }
 
     &__button {
-      width: 170px;
-      margin-top: 30px;
+      width: 10.625rem;
+      margin-top: 1.875rem;
     }
   }
 
@@ -571,7 +579,7 @@ body {
     justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 
   .comment-box {
@@ -590,7 +598,7 @@ body {
 
   .comments-header {
     @include s-header-font-d-t;
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
 
   // footer
@@ -607,7 +615,7 @@ body {
       &-top {
         width: 100%;
         display: flex;
-        gap: 30px;
+        gap: 1.875re m;
         flex-wrap: wrap;
       }
 
@@ -618,15 +626,16 @@ body {
       &__block {
         margin-top: 0.625rem;
         margin-bottom: 0.625rem;
+        margin-left: 1.5rem;
         max-width: $full-width-height;
 
         &--large {
           display: flex;
           flex-wrap: wrap;
-          height: 50px;
+          height: 3.125rem;
           margin: 0;
           align-content: end;
-          margin-bottom: 10px;
+          margin-bottom: 0.625rem;
         }
 
         &__icons {
@@ -642,7 +651,7 @@ body {
         &__info {
           margin-top: 1.25rem;
           margin-bottom: 1.25rem;
-          font-size: 14px;
+          font-size: 0.875rem;
         }
 
         &__info p {
@@ -655,8 +664,8 @@ body {
           width: 31%;
           margin: 0;
           @include s-header-font-d-t;
-          margin-right: 20px;
-          height: 38px;
+          margin-right: 1.25rem;
+          height: 2.375rem;
         }
 
         &__copy {
@@ -679,7 +688,7 @@ body {
         flex-wrap: wrap;
         width: $full-width-height;
         margin-top: 0.313rem;
-        height: 40px;
+        height: 2.5rem;
         align-items: center;
         margin-bottom: 0.938rem;
       }
@@ -691,7 +700,7 @@ body {
 @media screen and (min-width: 1280px) {
   // navigation bar
   .nav-bar {
-    height: 80px;
+    height: 5rem;
 
     &__list {
       width: 16%;
@@ -719,7 +728,7 @@ body {
   // hero section
   .hero {
     //used px because % cannot is capped and cannot create desired height
-    height: 620px;
+    height: 38.75rem;
 
     &__text {
       padding-left: 8.125rem;
@@ -753,8 +762,8 @@ body {
 
     &__image {
       width: $full-width-height;
-      height: 500px;
-      width: 900px;
+      height: 31.25rem;
+      width: 56.25rem;
     }
 
     &__paragraphs {
@@ -767,8 +776,8 @@ body {
   }
 
   .photo-gallery {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
 
     &__photos {
       width: $full-width-height;
@@ -777,8 +786,8 @@ body {
         width: 27%;
 
         &:hover {
-          width: 500px;
-          height: 300px;
+          width: 31.25rem;
+          height: 18.75;
           border: solid black 10px;
         }
       }
@@ -794,14 +803,14 @@ body {
 
   // COMMENTS SECTION
   .comments {
-    padding: 0px 120px 0 120px;
+    padding: 0 7.5 0 7.5;
   }
 
   .input {
     width: 40%;
 
     &__button {
-      width: 150px;
+      width: 9.375;
     }
   }
 
@@ -811,25 +820,26 @@ body {
 
   // footer section
   .footer {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
 
     &__body {
       width: 78%;
 
       &-top {
-        gap: 60px;
+        gap: 3.75rem;
       }
 
       &__block {
+        margin-left: 0;
         &__copy {
-          font-size: 14px;
+          font-size: 0.875rem;
         }
 
         &__header {
           width: 23%;
           margin: 0;
-          margin-right: 18px;
+          margin-right: 1.125rem;
         }
 
         &__icons {

@@ -1,55 +1,62 @@
-@use './variables' as *;
-
+@use "./variables" as *;
 
 // mobile fonts
 @mixin p-s-header-font-mob() {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 @mixin subHeader-font-mob() {
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 @mixin b-f-font-mob() {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
 }
 
 @mixin labelANDbuttons-font-mob() {
-  font-size: 10px;
-  line-height: 20px;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
 }
 
 // desktop and tablet fonts
 @mixin p-header-font-d-t() {
-  font-size: 60px;
-  line-height: 68px;
+  font-size: 3.75rem;
+  line-height: 4.25rem;
 }
 
 @mixin s-header-font-d-t() {
-  font-size: 36px;
-  line-height: 44px;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
 }
 
 @mixin subHeader-font-d-t() {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 @mixin b-font-d-t() {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 @mixin f-font-d-t() {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 @mixin labelsANDbuttons-font-d-t() {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
+//breakpoints
+@mixin desktop() {
+  min-width: 1280px;
+}
+
+@mixin tablet() {
+  min-width: 768px;
 }
