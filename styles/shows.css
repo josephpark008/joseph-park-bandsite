@@ -28,7 +28,7 @@ body {
 
 .nav-bar {
   background-color: #323232;
-  color: #afafaf;
+  color: #AFAFAF;
   display: flex;
   flex-wrap: wrap;
 }
@@ -53,17 +53,17 @@ body {
   text-align: center;
   padding-bottom: 0.625rem;
   text-decoration: none;
-  color: #afafaf;
+  color: #AFAFAF;
   font-weight: 300;
 }
 .nav-list__item--selected {
-  border-bottom: 3px solid white;
-  color: white;
+  border-bottom: 3px solid #FFFFFF;
+  color: #FFFFFF;
   font-weight: 600;
 }
 .nav-list__item:hover {
-  border-bottom: 3px solid white;
-  color: white;
+  border-bottom: 3px solid #FFFFFF;
+  color: #FFFFFF;
 }
 
 .hero {
@@ -82,7 +82,7 @@ body {
   padding: 1.875rem 1.25rem 1.563rem 0.938rem;
 }
 .hero__filter__header {
-  color: white;
+  color: #FFFFFF;
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
@@ -92,7 +92,7 @@ body {
   font-size: 13px;
   line-height: 18px;
   margin: 0;
-  color: white;
+  color: #FFFFFF;
   font-weight: 400;
 }
 .hero__filter__sound {
@@ -120,7 +120,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000000;
   padding: 15px 0 15px 0;
 }
 
@@ -129,7 +129,7 @@ body {
   align-items: center;
 }
 .show-pairs__date-label, .show-pairs__venue-label, .show-pairs__location-label {
-  color: #afafaf;
+  color: #AFAFAF;
   font-size: 13px;
   line-height: 18px;
   font-size: 0.563rem;
@@ -151,15 +151,16 @@ body {
 
 .submit-button {
   width: 90%;
-  height: 100%;
+  height: 60%;
   background-color: #323232;
-  color: white;
+  color: #FFFFFF;
   border: none;
   border-radius: 4px;
+  padding: 8px 0 8px 0;
 }
 .submit-button__text {
-  height: 100%;
-  color: white;
+  margin: 0;
+  color: #FFFFFF;
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
@@ -167,12 +168,11 @@ body {
 
 .footer {
   background-color: #323232;
-  color: white;
+  color: #FFFFFF;
   padding: 16px;
 }
 .footer__body__block {
-  margin-top: 0.625rem;
-  margin-bottom: 0.625rem;
+  margin: 0.625rem 0 0.625rem 0;
 }
 .footer__body__block__header {
   font-weight: 600;
@@ -186,8 +186,7 @@ body {
   margin-bottom: 1rem;
 }
 .footer__body__block__s-header, .footer__body__block__info {
-  margin-top: 1.25rem;
-  margin-bottom: 1rem;
+  margin: 1.25rem 0 1rem 0;
 }
 .footer__body__block__info p {
   margin: 0;
@@ -200,8 +199,7 @@ body {
   margin: 0;
 }
 .footer__body__block__info--bold {
-  margin-top: 0.938rem;
-  margin-bottom: 1.563rem;
+  margin: 0.938rem 0 1.563rem 0;
 }
 .footer__body__block__copy {
   margin-top: 0.925rem;
@@ -288,7 +286,6 @@ body {
     height: 40%;
   }
   #shows-section {
-    height: 40.625rem;
     display: flex;
     flex-direction: column;
     padding-bottom: 1.875rem;
@@ -310,7 +307,7 @@ body {
     margin-right: 200px;
   }
   .shows-block__date, .shows-block__location, .shows-block__venue {
-    color: #afafaf;
+    color: #AFAFAF;
     font-size: 13px;
     line-height: 18px;
     font-size: 0.563rem;
@@ -340,6 +337,15 @@ body {
   .submit-button {
     width: 22%;
     margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+  }
+  .submit-button__text {
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
   .footer {
     padding: 3.125rem;
@@ -357,8 +363,7 @@ body {
     margin-left: 1.25rem;
   }
   .footer__body__block {
-    margin-top: 0.625rem;
-    margin-bottom: 0.625rem;
+    margin: 0.625rem 0 0.625rem 0;
     max-width: 100%;
   }
   .footer__body__block--large {
@@ -378,14 +383,12 @@ body {
     align-items: end;
   }
   .footer__body__block__s-header, .footer__body__block__info {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
+    margin: 1.25rem 0 1.25rem 0;
     font-size: 14px;
     line-height: 22px;
   }
   .footer__body__block__info p {
-    margin-top: 0.313rem;
-    margin-bottom: 0.313rem;
+    margin: 0.313rem 0 0.313rem 0;
     font-weight: 300;
   }
   .footer__body__block__header {
@@ -413,10 +416,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 0.313rem;
     height: 2.5rem;
     align-items: center;
-    margin-bottom: 0.938rem;
+    margin: 0.313rem 0 0.938rem 0;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -424,9 +426,7 @@ body {
     height: 5rem;
   }
   .nav-bar__band-icon {
-    margin: 0;
-    margin-left: 7.5rem;
-    margin-right: 3.75rem;
+    margin: 0 3.75rem 0 7.5rem;
     width: 8%;
     padding-top: 2.188rem;
   }
@@ -434,9 +434,7 @@ body {
     width: 20%;
   }
   .nav-list__item {
-    padding: 0;
-    padding-top: 3.125rem;
-    padding-bottom: 1.25rem;
+    padding: 3.125rem 0 1.25rem 0;
   }
   nav {
     height: 80%;
@@ -475,36 +473,55 @@ body {
   }
   #shows-section {
     padding: 0;
-    padding-top: 0.938rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  #shows-section__block {
+    padding-top: 4rem;
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    width: 67%;
-    padding-top: 5rem;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 100px;
   }
-  #shows-section__header {
+  .shows-block {
+    margin: 20px 0 0 0;
+    width: 80%;
+  }
+  .shows-block__date {
+    padding-left: 150px;
+  }
+  .shows-block__venue {
+    padding-left: 235px;
+  }
+  .shows-block__location {
+    padding-left: 135px;
+  }
+  .shows-header {
     height: 100%;
     width: 10%;
-    margin-left: 7.5rem;
+    margin: 0;
   }
-  #shows-section__cards {
-    width: 97%;
+  .show-cards {
+    width: 67%;
     padding: 1.25rem;
     padding-right: 1.25rem;
   }
-  #shows-section__cards__info--bold {
+  .show-cards__info--bold {
     padding-right: 5.625rem;
   }
-  #shows-section__cards__details {
+  .show-cards__details {
     top: 4.5rem;
+  }
+  .show-pairs {
+    width: 23%;
+  }
+  .show-pairs__date-input {
+    width: 60%;
+  }
+  .show-pairs__venue-input {
+    width: 50%;
+    padding-left: 80px;
+  }
+  .show-pairs__location-input {
+    width: 55%;
+    padding-left: 50px;
   }
   .footer {
     padding-left: 7.5rem;

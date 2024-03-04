@@ -16,8 +16,8 @@ body {
 }
 
 .nav-bar {
-  background-color: #323232;
-  color: #afafaf;
+  background-color: $bandsite-black;
+  color: $silver;
   display: flex;
   flex-wrap: wrap;
 
@@ -43,18 +43,18 @@ body {
     text-align: center;
     padding-bottom: 0.625rem;
     text-decoration: none;
-    color: #afafaf;
+    color: $silver;
     font-weight: 300;
 
     &--selected {
-      border-bottom: 3px solid white;
-      color: white;
+      border-bottom: 3px solid $white;
+      color: $white;
       font-weight: 600;
     }
 
     &:hover {
-      border-bottom: 3px solid white;
-      color: white;
+      border-bottom: 3px solid $white;
+      color: $white;
     }
   }
 }
@@ -76,7 +76,7 @@ body {
     padding: 1.875rem 1.25rem 1.563rem 0.938rem;
 
     &__header {
-      color: white;
+      color: $white;
       @include p-s-header-font-mob;
       font-weight: 600;
       width: 80%;
@@ -85,7 +85,7 @@ body {
     &__text {
       @include b-f-font-mob;
       margin: 0;
-      color: white;
+      color: $white;
       font-weight: 400;
     }
 
@@ -115,7 +115,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $bandsite-darkblack;
   padding: 15px 0 15px 0;
 }
 .show-pairs {
@@ -125,7 +125,7 @@ body {
   &__date-label,
   &__venue-label,
   &__location-label {
-    color: #afafaf;
+    color: $silver;
     @include b-f-font-mob;
     font-size: 0.563rem;
     font-weight: 600;
@@ -147,14 +147,15 @@ body {
 
 .submit-button {
   width: 90%;
-  height: 100%;
-  background-color: #323232;
-  color: white;
+  height: 60%;
+  background-color: $bandsite-black;
+  color: $white;
   border: none;
   border-radius: 4px;
+  padding: 8px 0 8px 0;
   &__text {
-    height: 100%;
-    color: white;
+    margin: 0;
+    color: $white;
     @include b-font-d-t;
     font-weight: 600;
   }
@@ -162,14 +163,13 @@ body {
 
 //footer
 .footer {
-  background-color: #323232;
-  color: white;
+  background-color: $bandsite-black;
+  color: $white;
   padding: $padding;
 
   &__body {
     &__block {
-      margin-top: 0.625rem;
-      margin-bottom: 0.625rem;
+      margin: 0.625rem 0 0.625rem 0;
 
       &__header {
         font-weight: 600;
@@ -186,8 +186,7 @@ body {
 
       &__s-header,
       &__info {
-        margin-top: 1.25rem;
-        margin-bottom: 1rem;
+        margin: 1.25rem 0 1rem 0;
       }
 
       &__info p {
@@ -203,8 +202,7 @@ body {
         margin: 0;
 
         &--bold {
-          margin-top: 0.938rem;
-          margin-bottom: 1.563rem;
+          margin: 0.938rem 0 1.563rem 0;
         }
       }
 
@@ -311,7 +309,6 @@ body {
   // SHOWS SECTION
 
   #shows-section {
-    height: 40.625rem;
     display: flex;
     flex-direction: column;
     padding-bottom: 1.875rem;
@@ -339,7 +336,7 @@ body {
     &__date,
     &__location,
     &__venue {
-      color: #afafaf;
+      color: $silver;
       @include b-f-font-mob;
       font-size: 0.563rem;
       font-weight: 600;
@@ -373,72 +370,16 @@ body {
   .submit-button {
     width: 22%;
     margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    &__text {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
   }
-  // .shows {
-
-
-  //   &__block {
-  //     display: flex;
-  //     justify-content: center;
-  //     flex-wrap: wrap;
-  //   }
-
-  //   &__cards {
-  //     width: 93%;
-  //     display: flex;
-  //     padding: 1.875rem 1.25rem 1.875rem 1.25rem;
-  //     justify-content: space-between;
-  //     align-items: center;
-  //     height: 5rem;
-  //     text-align: left;
-  //     box-sizing: border-box;
-
-  //     &__blocks {
-  //       width: 80%;
-  //       display: flex;
-  //       justify-content: space-between;
-  //     }
-
-  //     &__info {
-  //       margin: 0;
-  //       width: 8.125rem;
-  //       @include b-font-d-t;
-  //     }
-
-  //     &__details {
-  //       @include labelsANDbuttons-font-d-t;
-  //       position: absolute;
-  //       top: 5rem;
-  //     }
-
-  //     &__venue-label {
-  //       left: 220px;
-  //     }
-
-  //     &__location-label {
-  //       left: 400px;
-  //     }
-
-  //     &__submit {
-  //       width: 9.063rem;
-  //       height: 2.5rem;
-  //       margin: 0;
-  //       margin-left: 60px;
-
-  //       &__button {
-  //         @include labelsANDbuttons-font-d-t;
-  //         width: 100%;
-  //         height: 100%;
-  //       }
-  //     }
-  //   }
-
-  //   &__header {
-  //     justify-self: start;
-  //     margin: 2.5rem 0 3.438rem 2.5rem;
-  //     @include s-header-font-d-t;
-  //   }
-  // }
 
   // footer
   .footer {
@@ -458,8 +399,7 @@ body {
       }
 
       &__block {
-        margin-top: 0.625rem;
-        margin-bottom: 0.625rem;
+        margin: 0.625rem 0 0.625rem 0;
         max-width: $full-width-height;
 
         &--large {
@@ -482,14 +422,12 @@ body {
 
         &__s-header,
         &__info {
-          margin-top: 1.25rem;
-          margin-bottom: 1.25rem;
+          margin: 1.25rem 0 1.25rem 0;
           @include b-font-d-t;
         }
 
         &__info p {
-          margin-top: 0.313rem;
-          margin-bottom: 0.313rem;
+          margin: 0.313rem 0 0.313rem 0;
           font-weight: 300;
         }
 
@@ -520,10 +458,9 @@ body {
         display: flex;
         flex-wrap: wrap;
         width: $full-width-height;
-        margin-top: 0.313rem;
         height: 2.5rem;
         align-items: center;
-        margin-bottom: 0.938rem;
+        margin: 0.313rem 0 0.938rem 0;
       }
     }
   }
@@ -536,9 +473,7 @@ body {
     height: 5rem;
 
     &__band-icon {
-      margin: 0;
-      margin-left: 7.5rem;
-      margin-right: 3.75rem;
+      margin: 0 3.75rem 0 7.5rem;
       width: 8%;
       padding-top: 2.188rem;
     }
@@ -547,9 +482,7 @@ body {
     width: 20%;
 
     &__item {
-      padding: 0;
-      padding-top: 3.125rem;
-      padding-bottom: 1.25rem;
+      padding: 3.125rem 0 1.25rem 0;
     }
   }
 
@@ -591,8 +524,6 @@ body {
 
   // SHOWS SECTION
   .shows-block {
-    &__date {
-    }
     &__venue {
       padding-left: 265px;
     }
@@ -602,43 +533,64 @@ body {
   }
   #shows-section {
     padding: 0;
-    padding-top: 0.938rem;
+    padding-top: 4rem;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 100px;
+  }
+  .shows-block {
+    margin: 20px 0 0 0;
+    width: 80%;
 
-    &__block {
-      display: flex;
-      flex-wrap: wrap;
-      height: 100%;
-      flex-direction: column;
-      justify-content: center;
-      align-content: center;
-      width: 67%;
-      padding-top: 5rem;
+    &__date {
+      padding-left: 150px;
     }
-
-    &__header {
-      height: 100%;
-      width: 10%;
-      margin-left: 7.5rem;
+    &__venue {
+      padding-left: 235px;
     }
-
-    &__cards {
-      width: 97%;
-      padding: 1.25rem;
-      padding-right: 1.25rem;
-
-      &__info--bold {
-        padding-right: 5.625rem;
-      }
-
-      &__details {
-        top: 4.5rem;
-      }
+    &__location {
+      padding-left: 135px;
     }
   }
 
+  .shows-header {
+    height: 100%;
+    width: 10%;
+    margin: 0;
+  }
+
+  .show-cards {
+    width: 67%;
+    padding: 1.25rem;
+    padding-right: 1.25rem;
+
+    &__info--bold {
+      padding-right: 5.625rem;
+    }
+
+    &__details {
+      top: 4.5rem;
+    }
+  }
+
+  .show-pairs {
+    width: 23%;
+    &__date-input {
+      width: 60%;
+    }
+
+    &__venue-input {
+      width: 50%;
+      padding-left: 80px;
+    }
+
+    &__location-input {
+      width: 55%;
+      padding-left: 50px;
+    }
+  }
   // footer section
   .footer {
     padding-left: 7.5rem;
