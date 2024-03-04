@@ -16,7 +16,7 @@
 /* fonts mobile */
 body {
   margin: 0;
-  font-family: "Avenir";
+  font-family: "Avenir", sans-serif;
 }
 
 .nav-bar__list__item,
@@ -32,6 +32,11 @@ body {
 .footer__body__block__header {
   font-size: 24px;
   line-height: 32px;
+}
+
+.about-info__header,
+.photo-gallery__header {
+  color: #323232;
 }
 
 .about-info__paragraphs__p1,
@@ -82,13 +87,13 @@ body {
   font-weight: 300;
 }
 .nav-bar__list__item--selected {
-  border-bottom: 3px solid white;
-  color: white;
+  border-bottom: 3px solid #FFFFFF;
+  color: #FFFFFF;
   font-weight: 600;
 }
 .nav-bar__list__item:hover {
-  border-bottom: 3px solid white;
-  color: white;
+  border-bottom: 3px solid #FFFFFF;
+  color: #FFFFFF;
 }
 
 .hero {
@@ -102,7 +107,7 @@ body {
   margin: 0;
 }
 .hero__text {
-  color: white;
+  color: #FFFFFF;
   left: 16px;
   top: 42%;
   margin: 0px;
@@ -208,12 +213,12 @@ body {
 }
 .input__comment::-moz-placeholder, .input__name::-moz-placeholder {
   font-size: 0.75rem;
-  color: black;
+  color: #323232;
   font-family: "Avenir";
 }
 .input__comment::placeholder, .input__name::placeholder {
   font-size: 0.75rem;
-  color: black;
+  color: #323232;
   font-family: "Avenir";
 }
 .input__name-label, .input__comment-label {
@@ -228,7 +233,7 @@ body {
 }
 .input__button {
   background-color: #323232;
-  color: white;
+  color: #FFFFFF;
   border: 5px;
   width: 14.375rem;
   border-radius: 4px;
@@ -291,12 +296,12 @@ body {
 }
 
 .last-comment {
-  border-bottom: solid #afafaf 1px;
+  border-bottom: solid #AFAFAF 1px;
 }
 
 .footer {
   background-color: #323232;
-  color: white;
+  color: #FFFFFF;
   padding: 16px;
   margin-top: 5px;
 }

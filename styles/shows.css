@@ -16,7 +16,7 @@
 /* fonts mobile */
 body {
   margin: 0;
-  font-family: "Avenir";
+  font-family: "Avenir", sans-serif;
 }
 
 /* navigation bar mobile */
@@ -28,7 +28,7 @@ body {
 
 .nav-bar {
   background-color: #323232;
-  color: #AFAFAF;
+  color: #afafaf;
   display: flex;
   flex-wrap: wrap;
 }
@@ -38,7 +38,8 @@ body {
   padding: 0.5rem;
   padding-top: 0.938rem;
 }
-.nav-bar__list {
+
+.nav-list {
   list-style-type: none;
   padding: 0;
   display: flex;
@@ -47,20 +48,20 @@ body {
   align-items: center;
   text-decoration: none;
 }
-.nav-bar__list__item {
+.nav-list__item {
   width: 50%;
   text-align: center;
   padding-bottom: 0.625rem;
   text-decoration: none;
-  color: #AFAFAF;
+  color: #afafaf;
   font-weight: 300;
 }
-.nav-bar__list__item--selected {
+.nav-list__item--selected {
   border-bottom: 3px solid white;
   color: white;
   font-weight: 600;
 }
-.nav-bar__list__item:hover {
+.nav-list__item:hover {
   border-bottom: 3px solid white;
   color: white;
 }
@@ -99,61 +100,64 @@ body {
   height: 45%;
 }
 
-.shows {
-  box-sizing: border-box;
-  padding-bottom: 0.938rem;
+#shows-section {
+  margin-bottom: 20px;
 }
-.shows__header {
+
+.shows-header {
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
-  margin: 1.563rem 0 0 1.438rem;
+  margin: 30px 0 20px 15px;
 }
-.shows__cards {
-  padding: 1.438rem;
-  padding-top: 0.938rem;
-  border-bottom: solid 1px #E1E1E1;
+
+.shows-block {
+  display: none;
 }
-.shows__cards:hover {
-  background-color: #FAFAFA;
+
+.show-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding: 15px 0 15px 0;
 }
-.shows__cards:active {
-  background-color: #E1E1E1;
+
+.show-pairs {
+  width: 100%;
+  align-items: center;
 }
-.shows__cards__details {
-  color: #AFAFAF;
+.show-pairs__date-label, .show-pairs__venue-label, .show-pairs__location-label {
+  color: #afafaf;
   font-size: 13px;
   line-height: 18px;
   font-size: 0.563rem;
   font-weight: 600;
   margin: 0;
+  padding-left: 15px;
 }
-.shows__cards__info {
+.show-pairs__date-input, .show-pairs__venue-input, .show-pairs__location-input {
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
   font-size: 0.75rem;
-  margin: 0 0 0.625rem 0;
   font-weight: 400;
+  padding-left: 15px;
 }
-.shows__cards__info--bold {
+.show-pairs__date-input--bold {
   font-weight: 600;
 }
-.shows__cards__submit {
-  display: flex;
-  width: 17.125rem;
-  justify-content: center;
-  height: 3vh;
-}
-.shows__cards__submit__button {
-  width: 100%;
+
+.submit-button {
+  width: 90%;
   height: 100%;
   background-color: #323232;
   color: white;
   border: none;
   border-radius: 4px;
 }
-.shows__cards__submit__button span {
+.submit-button__text {
   height: 100%;
   color: white;
   font-size: 14px;
@@ -250,10 +254,10 @@ body {
     align-self: center;
     padding-bottom: 1.25rem;
   }
-  .nav-bar__list {
+  .nav-list {
     width: 30%;
   }
-  .nav-bar__list__item {
+  .nav-list__item {
     width: 43%;
     padding-bottom: 1.563rem;
     padding-top: 1.25rem;
@@ -283,60 +287,59 @@ body {
     width: 62%;
     height: 40%;
   }
-  .shows {
+  #shows-section {
     height: 40.625rem;
     display: flex;
     flex-direction: column;
-    position: relative;
     padding-bottom: 1.875rem;
-  }
-  .shows__block {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .shows__cards {
-    width: 93%;
-    display: flex;
-    padding: 1.875rem 1.25rem 1.875rem 1.25rem;
-    justify-content: space-between;
     align-items: center;
-    height: 5rem;
-    text-align: left;
-    box-sizing: border-box;
   }
-  .shows__cards__info {
-    margin: 0;
-    width: 8.125rem;
-    font-size: 14px;
-    line-height: 22px;
-  }
-  .shows__cards__details {
-    font-size: 12px;
-    line-height: 20px;
-    position: absolute;
-    top: 7.5rem;
-  }
-  .shows__cards__details--hidden {
-    display: none;
-  }
-  .shows__cards__submit {
-    width: 9.063rem;
-    height: 2.5rem;
-    margin: 0;
-  }
-  .shows__cards__submit__button {
-    font-size: 12px;
-    line-height: 20px;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-  .shows__header {
+  .shows-header {
     justify-self: start;
-    margin: 2.5rem 0 3.438rem 2.5rem;
+    margin: 3rem 40rem 2rem 5rem;
     font-size: 36px;
     line-height: 44px;
+    display: flex;
+  }
+  .show-pairs__date-label, .show-pairs__venue-label, .show-pairs__location-label {
+    display: none;
+  }
+  .shows-block {
+    width: 80%;
+    display: flex;
+    margin-right: 200px;
+  }
+  .shows-block__date, .shows-block__location, .shows-block__venue {
+    color: #afafaf;
+    font-size: 13px;
+    line-height: 18px;
+    font-size: 0.563rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  .shows-block__location {
+    padding-left: 140px;
+  }
+  .shows-block__date {
+    padding: 0;
+    padding-left: 76px;
+  }
+  .shows-block__venue {
+    padding: 0;
+    padding-left: 145px;
+  }
+  .show-cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-between;
+  }
+  .show-pairs {
+    width: 24%;
+  }
+  .submit-button {
+    width: 22%;
+    margin-left: 30px;
   }
   .footer {
     padding: 3.125rem;
@@ -420,20 +423,20 @@ body {
   .nav-bar {
     height: 5rem;
   }
-  .nav-bar__list {
-    width: 16%;
-  }
-  .nav-bar__list__item {
-    padding: 0;
-    padding-top: 3.125rem;
-    padding-bottom: 1.25rem;
-  }
   .nav-bar__band-icon {
     margin: 0;
     margin-left: 7.5rem;
     margin-right: 3.75rem;
     width: 8%;
     padding-top: 2.188rem;
+  }
+  .nav-list {
+    width: 20%;
+  }
+  .nav-list__item {
+    padding: 0;
+    padding-top: 3.125rem;
+    padding-bottom: 1.25rem;
   }
   nav {
     height: 80%;
@@ -464,15 +467,20 @@ body {
     margin: 0;
     margin-top: 1.25rem;
   }
-  .shows {
+  .shows-block__venue {
+    padding-left: 265px;
+  }
+  .shows-block__location {
+    padding-left: 255px;
+  }
+  #shows-section {
     padding: 0;
     padding-top: 0.938rem;
-    height: 50vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
   }
-  .shows__block {
+  #shows-section__block {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
@@ -482,20 +490,20 @@ body {
     width: 67%;
     padding-top: 5rem;
   }
-  .shows__header {
+  #shows-section__header {
     height: 100%;
     width: 10%;
     margin-left: 7.5rem;
   }
-  .shows__cards {
+  #shows-section__cards {
     width: 97%;
     padding: 1.25rem;
     padding-right: 1.25rem;
   }
-  .shows__cards__info--bold {
+  #shows-section__cards__info--bold {
     padding-right: 5.625rem;
   }
-  .shows__cards__details {
+  #shows-section__cards__details {
     top: 4.5rem;
   }
   .footer {

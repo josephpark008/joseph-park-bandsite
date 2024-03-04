@@ -1,14 +1,12 @@
-@use './partials/variables' as *;
-@use './partials/mixins' as *;
-@use './partials/typography' as *;
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+@use "./partials/typography" as *;
 
 /* fonts mobile */
 body {
   margin: 0;
-  font-family: 'Avenir';
+  font-family: "Avenir", sans-serif;
 }
-
-
 
 /* navigation bar mobile */
 .nav-bar nav,
@@ -19,7 +17,7 @@ body {
 
 .nav-bar {
   background-color: #323232;
-  color: #AFAFAF;
+  color: #afafaf;
   display: flex;
   flex-wrap: wrap;
 
@@ -29,39 +27,37 @@ body {
     padding: 0.5rem;
     padding-top: 0.938rem;
   }
+}
 
-  &__list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    align-items: center;
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  align-items: center;
+  text-decoration: none;
+
+  &__item {
+    width: 50%;
+    text-align: center;
+    padding-bottom: 0.625rem;
     text-decoration: none;
+    color: #afafaf;
+    font-weight: 300;
 
-    &__item {
-      width: 50%;
-      text-align: center;
-      padding-bottom: 0.625rem;
-      text-decoration: none;
-      color: #AFAFAF;
-      font-weight: 300;
+    &--selected {
+      border-bottom: 3px solid white;
+      color: white;
+      font-weight: 600;
+    }
 
-      &--selected {
-        border-bottom: 3px solid white;
-        color: white;
-        font-weight: 600;
-      }
-
-      &:hover {
-        border-bottom: 3px solid white;
-        color: white;
-      }
+    &:hover {
+      border-bottom: 3px solid white;
+      color: white;
     }
   }
 }
-
-
 
 // hero section
 .hero {
@@ -78,7 +74,6 @@ body {
     height: 100%;
     width: 100%;
     padding: 1.875rem 1.25rem 1.563rem 0.938rem;
-
 
     &__header {
       color: white;
@@ -101,75 +96,67 @@ body {
   }
 }
 
-
 // SHOWS SECTION
-.shows {
-  box-sizing: border-box;
-  padding-bottom: 0.938rem;
+#shows-section {
+  margin-bottom: 20px;
+}
+.shows-header {
+  @include p-s-header-font-mob;
+  font-weight: 600;
+  margin: 30px 0 20px 15px;
+}
 
-  &__header {
-    @include p-s-header-font-mob;
+.shows-block {
+  display: none;
+}
+
+.show-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding: 15px 0 15px 0;
+}
+.show-pairs {
+  width: 100%;
+  align-items: center;
+
+  &__date-label,
+  &__venue-label,
+  &__location-label {
+    color: #afafaf;
+    @include b-f-font-mob;
+    font-size: 0.563rem;
     font-weight: 600;
-    margin: 1.563rem 0 0 1.438rem;
+    margin: 0;
+    padding-left: 15px;
   }
+  &__date-input,
+  &__venue-input,
+  &__location-input {
+    @include subHeader-font-mob;
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding-left: 15px;
+  }
+  &__date-input--bold {
+    font-weight: 600;
+  }
+}
 
-
-  &__cards {
-    padding: 1.438rem;
-    padding-top: 0.938rem;
-    border-bottom: solid 1px #E1E1E1;
-
-    &:hover {
-      background-color: #FAFAFA;
-    }
-
-    &:active {
-      background-color: #E1E1E1;
-    }
-
-
-
-    &__details {
-      color: #AFAFAF;
-      @include b-f-font-mob;
-      font-size: 0.563rem;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    &__info {
-      @include subHeader-font-mob;
-      font-size: 0.75rem;
-      margin: 0 0 0.625rem 0;
-      font-weight: 400;
-
-      &--bold {
-        font-weight: 600;
-      }
-    }
-
-    &__submit {
-      display: flex;
-      width: 17.125rem;
-      justify-content: center;
-      height: 3vh;
-
-      &__button {
-        width: 100%;
-        height: 100%;
-        background-color: #323232;
-        color: white;
-        border: none;
-        border-radius: 4px;
-      }
-
-      &__button span {
-        height: 100%;
-        color: white;
-        @include b-font-d-t;
-        font-weight: 600;
-      }
-    }
+.submit-button {
+  width: 90%;
+  height: 100%;
+  background-color: #323232;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  &__text {
+    height: 100%;
+    color: white;
+    @include b-font-d-t;
+    font-weight: 600;
   }
 }
 
@@ -180,7 +167,6 @@ body {
   padding: $padding;
 
   &__body {
-
     &__block {
       margin-top: 0.625rem;
       margin-bottom: 0.625rem;
@@ -237,7 +223,6 @@ body {
 // TABLET
 // navigation bar
 @media screen and (min-width: 768px) {
-
   .nav-bar__list__item {
     @include labelsANDbuttons-font-d-t;
   }
@@ -268,8 +253,6 @@ body {
     @include b-font-d-t;
   }
 
-
-
   // navigation bar
   nav {
     display: flex;
@@ -279,25 +262,22 @@ body {
   }
 
   .nav-bar {
-
     &__band-icon {
       width: 20%;
       margin-right: 1.563rem;
       align-self: center;
       padding-bottom: 1.25rem;
     }
+  }
+  .nav-list {
+    width: 30%;
 
-    &__list {
-      width: 30%;
-
-      &__item {
-        width: 43%;
-        padding-bottom: 1.563rem;
-        padding-top: 1.25rem;
-      }
+    &__item {
+      width: 43%;
+      padding-bottom: 1.563rem;
+      padding-top: 1.25rem;
     }
   }
-
 
   // hero section
   .hero {
@@ -328,72 +308,137 @@ body {
     }
   }
 
-
   // SHOWS SECTION
-  .shows {
+
+  #shows-section {
     height: 40.625rem;
     display: flex;
     flex-direction: column;
-    position: relative;
     padding-bottom: 1.875rem;
-
-    &__block {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    &__cards {
-      width: 93%;
-      display: flex;
-      padding: 1.875rem 1.25rem 1.875rem 1.25rem;
-      justify-content: space-between;
-      align-items: center;
-      height: 5rem;
-      text-align: left;
-      box-sizing: border-box;
-
-      &__info {
-        margin: 0;
-        width: 8.125rem;
-        @include b-font-d-t;
-      }
-
-      &__details {
-        @include labelsANDbuttons-font-d-t;
-        position: absolute;
-        top: 7.5rem;
-
-
-        &--hidden {
-          display: none;
-        }
-      }
-
-      &__submit {
-        width: 9.063rem;
-        height: 2.5rem;
-        margin: 0;
-
-        &__button {
-          @include labelsANDbuttons-font-d-t;
-          width: 100%;
-          height: 100%;
-          margin: 0;
-        }
-      }
-    }
-
-
-    &__header {
-      justify-self: start;
-      margin: 2.5rem 0 3.438rem 2.5rem;
-      @include s-header-font-d-t;
-    }
-
-
-
+    align-items: center;
   }
+  .shows-header {
+    justify-self: start;
+    margin: 3rem 40rem 2rem 5rem;
+    @include s-header-font-d-t;
+    display: flex;
+  }
+
+  .show-pairs {
+    &__date-label,
+    &__venue-label,
+    &__location-label {
+      display: none;
+    }
+  }
+  .shows-block {
+    width: 80%;
+    display: flex;
+    margin-right: 200px;
+
+    &__date,
+    &__location,
+    &__venue {
+      color: #afafaf;
+      @include b-f-font-mob;
+      font-size: 0.563rem;
+      font-weight: 600;
+      margin: 0;
+    }
+    &__location {
+      padding-left: 140px;
+    }
+
+    &__date {
+      padding: 0;
+      padding-left: 76px;
+    }
+
+    &__venue {
+      padding: 0;
+      padding-left: 145px;
+    }
+  }
+  .show-cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .show-pairs {
+    width: 24%;
+  }
+
+  .submit-button {
+    width: 22%;
+    margin-left: 30px;
+  }
+  // .shows {
+
+
+  //   &__block {
+  //     display: flex;
+  //     justify-content: center;
+  //     flex-wrap: wrap;
+  //   }
+
+  //   &__cards {
+  //     width: 93%;
+  //     display: flex;
+  //     padding: 1.875rem 1.25rem 1.875rem 1.25rem;
+  //     justify-content: space-between;
+  //     align-items: center;
+  //     height: 5rem;
+  //     text-align: left;
+  //     box-sizing: border-box;
+
+  //     &__blocks {
+  //       width: 80%;
+  //       display: flex;
+  //       justify-content: space-between;
+  //     }
+
+  //     &__info {
+  //       margin: 0;
+  //       width: 8.125rem;
+  //       @include b-font-d-t;
+  //     }
+
+  //     &__details {
+  //       @include labelsANDbuttons-font-d-t;
+  //       position: absolute;
+  //       top: 5rem;
+  //     }
+
+  //     &__venue-label {
+  //       left: 220px;
+  //     }
+
+  //     &__location-label {
+  //       left: 400px;
+  //     }
+
+  //     &__submit {
+  //       width: 9.063rem;
+  //       height: 2.5rem;
+  //       margin: 0;
+  //       margin-left: 60px;
+
+  //       &__button {
+  //         @include labelsANDbuttons-font-d-t;
+  //         width: 100%;
+  //         height: 100%;
+  //       }
+  //     }
+  //   }
+
+  //   &__header {
+  //     justify-self: start;
+  //     margin: 2.5rem 0 3.438rem 2.5rem;
+  //     @include s-header-font-d-t;
+  //   }
+  // }
 
   // footer
   .footer {
@@ -407,8 +452,6 @@ body {
       width: 100%;
       gap: 1.875rem;
       height: 11.25rem;
-
-
 
       &__block1 {
         margin-left: 1.25rem;
@@ -443,7 +486,6 @@ body {
           margin-bottom: 1.25rem;
           @include b-font-d-t;
         }
-
 
         &__info p {
           margin-top: 0.313rem;
@@ -485,25 +527,13 @@ body {
       }
     }
   }
-
 }
 
 // DESKTOP
 @media screen and (min-width: 1280px) {
-
   // navigation bar
   .nav-bar {
     height: 5rem;
-
-    &__list {
-      width: 16%;
-
-      &__item {
-        padding: 0;
-        padding-top: 3.125rem;
-        padding-bottom: 1.25rem;
-      }
-    }
 
     &__band-icon {
       margin: 0;
@@ -511,6 +541,15 @@ body {
       margin-right: 3.75rem;
       width: 8%;
       padding-top: 2.188rem;
+    }
+  }
+  .nav-list {
+    width: 20%;
+
+    &__item {
+      padding: 0;
+      padding-top: 3.125rem;
+      padding-bottom: 1.25rem;
     }
   }
 
@@ -551,10 +590,19 @@ body {
   }
 
   // SHOWS SECTION
-  .shows {
+  .shows-block {
+    &__date {
+    }
+    &__venue {
+      padding-left: 265px;
+    }
+    &__location {
+      padding-left: 255px;
+    }
+  }
+  #shows-section {
     padding: 0;
     padding-top: 0.938rem;
-    height: 50vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -568,7 +616,6 @@ body {
       align-content: center;
       width: 67%;
       padding-top: 5rem;
-
     }
 
     &__header {
@@ -602,7 +649,6 @@ body {
       gap: 4.125rem;
 
       &__block {
-
         &__copy {
           @include b-font-d-t;
         }
@@ -622,6 +668,5 @@ body {
         }
       }
     }
-
   }
 }
